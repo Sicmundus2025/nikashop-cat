@@ -1,0 +1,25 @@
+{
+  "items": [
+    {
+      "producto": "Spotify Familiar",
+      "precio": "2300",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "YT Music Familiar",
+      "precio": "2600",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "YT Premium + Music",
+      "precio": "4100",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    }
+  ]
+}

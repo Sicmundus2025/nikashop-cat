@@ -1,0 +1,67 @@
+{
+  "items": [
+    {
+      "producto": "PS Plus Essential - 1 mes",
+      "precio": "12000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "PS Plus Essential - 3 meses",
+      "precio": "26000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "PS Plus Essential - 12 meses",
+      "precio": "72000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "PS Plus Extra - 1 mes",
+      "precio": "19000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "PS Plus Extra - 3 meses",
+      "precio": "42000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "PS Plus Extra - 12 meses",
+      "precio": "116000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "PS Plus Deluxe - 1 mes",
+      "precio": "22000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "PS Plus Deluxe - 3 meses",
+      "precio": "49000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "PS Plus Deluxe - 12 meses",
+      "precio": "138000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    }
+  ]
+}

@@ -1,0 +1,164 @@
+{
+  "items": [
+    {
+      "subcategoria": "Netflix",
+      "producto": "Perfil 1 mes",
+      "precio": "5100",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "subcategoria": "Netflix",
+      "producto": "Cuenta completa 1 mes",
+      "precio": "22000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "subcategoria": "Disney+",
+      "producto": "Perfil 1 mes",
+      "precio": "2800",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "subcategoria": "Disney+",
+      "producto": "Cuenta completa 1 mes",
+      "precio": "18000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "subcategoria": "HBO Max",
+      "producto": "Std Perfil",
+      "precio": "1600",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "subcategoria": "HBO Max",
+      "producto": "Platino Perfil",
+      "precio": "2500",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "subcategoria": "HBO Max",
+      "producto": "Std Cuenta",
+      "precio": "6100",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "subcategoria": "HBO Max",
+      "producto": "Platino Cuenta",
+      "precio": "12000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "subcategoria": "Crunchyroll",
+      "producto": "Perfil 1 mes",
+      "precio": "1800",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "subcategoria": "Crunchyroll",
+      "producto": "Cuenta completa 1 mes",
+      "precio": "6000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "subcategoria": "Prime Video",
+      "producto": "Perfil 1 mes",
+      "precio": "2000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "subcategoria": "Prime Video",
+      "producto": "Cuenta completa 1 mes",
+      "precio": "7000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "subcategoria": "Paramount+",
+      "producto": "3 perfiles",
+      "precio": "4350",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "subcategoria": "FlujoTV",
+      "producto": "Perfil",
+      "precio": "5000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "subcategoria": "FlujoTV",
+      "producto": "Cuenta completa",
+      "precio": "12000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "subcategoria": "IPTV",
+      "producto": "Perfil",
+      "precio": "3800",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "subcategoria": "IPTV",
+      "producto": "Cuenta completa",
+      "precio": "9150",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "subcategoria": "Apple TV",
+      "producto": "Perfil 1 mes",
+      "precio": "2500",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "subcategoria": "Universal+",
+      "producto": "Perfil 1 mes",
+      "precio": "2300",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "subcategoria": "Vix",
+      "producto": "Cuenta completa",
+      "precio": "5500",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    }
+  ]
+}

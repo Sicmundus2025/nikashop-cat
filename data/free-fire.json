@@ -1,0 +1,46 @@
+{
+  "items": [
+    {
+      "producto": "110 Diamantes",
+      "precio": "1600",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "341 Diamantes",
+      "precio": "4500",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "572 Diamantes",
+      "precio": "7500",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "1.166 Diamantes",
+      "precio": "13500",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "2.398 Diamantes",
+      "precio": "25900",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "6.160 Diamantes",
+      "precio": "69500",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    }
+  ]
+}

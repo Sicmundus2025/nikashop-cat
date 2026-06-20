@@ -1,0 +1,84 @@
+{
+  "items": [
+    {
+      "subcategoria": "Canva Pro",
+      "producto": "1 mes",
+      "precio": "2000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "subcategoria": "Canva Pro",
+      "producto": "3 meses",
+      "precio": "4100",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "subcategoria": "Canva Pro",
+      "producto": "6 meses",
+      "precio": "6600",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "subcategoria": "CapCut",
+      "producto": "1 dispositivo",
+      "precio": "7500",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "subcategoria": "CapCut",
+      "producto": "2 dispositivos",
+      "precio": "10000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "subcategoria": "CapCut",
+      "producto": "3 dispositivos",
+      "precio": "12000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "subcategoria": "VPNs",
+      "producto": "Surfshark VPN - 1 mes",
+      "precio": "2700",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "subcategoria": "VPNs",
+      "producto": "NordVPN - 1 mes",
+      "precio": "2700",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "subcategoria": "IA",
+      "producto": "ChatGPT Plus",
+      "precio": "8100",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "subcategoria": "IA",
+      "producto": "Gemini Pro - 1 mes",
+      "precio": "5500",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    }
+  ]
+}

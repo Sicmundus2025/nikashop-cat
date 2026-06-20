@@ -1,0 +1,25 @@
+{
+  "items": [
+    {
+      "producto": "500 Robux (5 USD)",
+      "precio": "8500",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "800 Robux",
+      "precio": "14700",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "1000 Robux (10 USD)",
+      "precio": "14900",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "items": [
+    {
+      "producto": "5 USD",
+      "precio": "8500",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "10 USD",
+      "precio": "16800",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "20 USD",
+      "precio": "32900",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "30 USD",
+      "precio": "48800",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "50 USD",
+      "precio": "81500",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    }
+  ]
+}

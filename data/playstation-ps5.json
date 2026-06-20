@@ -1,0 +1,2314 @@
+{
+  "items": [
+    {
+      "producto": "LEGO® Batman™: El Legado - Deluxe Edition (Primaria)",
+      "precio": "78000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "LEGO® Batman™: El Legado - Deluxe Edition (Secundaria)",
+      "precio": "44000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Invincible VS PS5 (Estándar) (Primaria)",
+      "precio": "44000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Invincible VS PS5 (Estándar) (Secundaria)",
+      "precio": "30000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Invincible VS PS5 (Deluxe Edition) (Primaria)",
+      "precio": "61000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Invincible VS PS5 (Deluxe Edition) (Secundaria)",
+      "precio": "36000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "SAROS Deluxe Edition PS5 (Primaria)",
+      "precio": "69000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "SAROS Deluxe Edition PS5 (Secundaria)",
+      "precio": "40000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Crimson Desert PS5 (Primaria)",
+      "precio": "61000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Crimson Desert PS5 (Secundaria)",
+      "precio": "36000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Crimson Desert Deluxe Edition (Primaria)",
+      "precio": "69000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Crimson Desert Deluxe Edition (Secundaria)",
+      "precio": "40000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Life is Strange Reunion PS5 (Primaria)",
+      "precio": "35000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Life is Strange Reunion PS5 (Secundaria)",
+      "precio": "35000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Marathon PS5 (Primaria)",
+      "precio": "35000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Marathon PS5 (Secundaria)",
+      "precio": "22000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "FATAL FRAME II: Crimson Butterfly REMAKE PS5 (Primaria)",
+      "precio": "44000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "FATAL FRAME II: Crimson Butterfly REMAKE PS5 (Secundaria)",
+      "precio": "44000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "WWE 2K26 PS5 (Primaria)",
+      "precio": "61000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "WWE 2K26 PS5 (Secundaria)",
+      "precio": "36000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Resident Evil Requiem (Estándar) (Primaria)",
+      "precio": "61000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Resident Evil Requiem (Estándar) (Secundaria)",
+      "precio": "36000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Atomic Heart Premium Edition PS5 (Primaria)",
+      "precio": "27000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Atomic Heart Premium Edition -PS4 y PS5- (Secundaria)",
+      "precio": "17000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Age of Empires II: Definitive PS5 (Secundaria)",
+      "precio": "22000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Battlefield 1 Revolution (Secundaria)",
+      "precio": "7000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Black Myth: Wukong PS5 (Primaria)",
+      "precio": "46000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Black Myth: Wukong PS5 (Secundaria)",
+      "precio": "31000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "RIDE 4 Special Edition PS5 (Primaria)",
+      "precio": "13000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Dead Rising Remaster PS5 (Secundaria)",
+      "precio": "15000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Slime Rancher 2 PS5 (Primaria)",
+      "precio": "9000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Slime Rancher 2 PS5 (Secundaria)",
+      "precio": "7000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Ghost of Tsushima DIRECTOR'S CUT (Primaria)",
+      "precio": "19000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Ghost of Tsushima DIRECTOR'S CUT (Secundaria)",
+      "precio": "18000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "SILENT HILL 2 PS5 (Secundaria)",
+      "precio": "19000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Farming Simulator 25 PS5 (Secundaria)",
+      "precio": "23000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Mount & Blade II: Bannerlord (Primaria)",
+      "precio": "24000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Mount & Blade II: Bannerlord (Secundaria)",
+      "precio": "22000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Need for Speed Unbound Ultimate Collection PS5 (Secundaria)",
+      "precio": "11000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Atomic Heart + Enchantment Under the Sea (Primaria)",
+      "precio": "31000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Atomic Heart + Enchantment Under the Sea (Secundaria)",
+      "precio": "31000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "UNCHARTED 4 + Lost Legacy -PS4 y PS5- (Secundaria)",
+      "precio": "13000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Sonic Origins Plus -PS4 y PS5- (Primaria)",
+      "precio": "15000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Sonic Origins Plus -PS4 y PS5- (Secundaria)",
+      "precio": "12000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "EA SPORTS PGA TOUR PS5 (Primaria)",
+      "precio": "12000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "EA SPORTS PGA TOUR PS5 (Secundaria)",
+      "precio": "7000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Tetris Effect: Connected (Secundaria)",
+      "precio": "10000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Titanfall 2 Ultimate Edition (Secundaria)",
+      "precio": "6000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "EA FC 24 -PS4 y PS5- (Primaria)",
+      "precio": "15000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "EA FC 24 -PS4 y PS5- (Secundaria)",
+      "precio": "12000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Party Animals PS5 (Primaria)",
+      "precio": "19000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Party Animals PS5 (Secundaria)",
+      "precio": "13000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Path of Titans -PS4 y PS5- (Primaria)",
+      "precio": "29000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Path of Titans -PS4 y PS5- (Secundaria)",
+      "precio": "29000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Battlefield 2042 Elite Edition (Primaria)",
+      "precio": "18000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Battlefield 2042 Elite Edition (Secundaria)",
+      "precio": "14000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "RE 2+ RE 3 + RE 4 Gold Edition (Primaria)",
+      "precio": "34000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "RE 2+ RE 3 + RE 4 Gold Edition (Secundaria)",
+      "precio": "34000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Serious Sam 4 PS5 (Primaria)",
+      "precio": "12000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Serious Sam 4 PS5 (Secundaria)",
+      "precio": "7000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Suicide Squad: Kill the Justice League Deluxe PS5 (Primaria)",
+      "precio": "12000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Suicide Squad: Kill the Justice League Deluxe PS5 (Secundaria)",
+      "precio": "7000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Kingdom Come: Deliverance II PS5 (Primaria)",
+      "precio": "34000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Kingdom Come: Deliverance II PS5 (Secundaria)",
+      "precio": "34000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Five Nights at Freddy's: Security Breach (Secundaria)",
+      "precio": "12000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Ultros -PS4 y PS5- (Primaria)",
+      "precio": "12000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Ultros -PS4 y PS5- (Secundaria)",
+      "precio": "7000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "God of War Ragnarök PS5 (Primaria)",
+      "precio": "29000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "DRAGON BALL FIGHTERZ FighterZ Edition (Primaria)",
+      "precio": "18000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "DRAGON BALL FIGHTERZ FighterZ Edition (Secundaria)",
+      "precio": "14000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Prince of Persia The Lost Crown -PS4 y PS5- (Primaria)",
+      "precio": "20000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Prince of Persia The Lost Crown -PS4 y PS5- (Secundaria)",
+      "precio": "19000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "DRAGON BALL XENOVERSE 1 + 2 -PS4 y PS5- (Primaria)",
+      "precio": "18000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Prince of Persia: The Lost Crown Complete Edition (Primaria)",
+      "precio": "22000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "CONTROL ULTIMATE EDITION -PS4 y PS5- (Primaria)",
+      "precio": "13000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "CONTROL ULTIMATE EDITION -PS4 y PS5- (Secundaria)",
+      "precio": "9000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "DEATH STRANDING DIRECTOR'S CUT PS5 (Secundaria)",
+      "precio": "13000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Riders Republic Skate Edition (Primaria)",
+      "precio": "15000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Riders Republic Skate Edition (Secundaria)",
+      "precio": "12000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "The Outer Worlds 2 PS5 (Primaria)",
+      "precio": "51000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "The Outer Worlds 2 PS5 (Secundaria)",
+      "precio": "51000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Like a Dragon: Pirate Yakuza in Hawaii (Secundaria)",
+      "precio": "13000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Killing Floor 2 (Secundaria)",
+      "precio": "7000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "ASTRO BOT PS5 (Primaria)",
+      "precio": "35000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "ASTRO BOT Deluxe Edition PS5 (Secundaria)",
+      "precio": "35000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "S.T.A.L.K.E.R. 2: Heart of Chornobyl PS5 (Primaria)",
+      "precio": "54000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "S.T.A.L.K.E.R. 2: Heart of Chornobyl PS5 (Secundaria)",
+      "precio": "54000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "NBA 2K24 -PS4 y PS5- (Primaria)",
+      "precio": "14000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "NBA 2K24 -PS4 y PS5- (Secundaria)",
+      "precio": "10000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Wuchang: Fallen Feathers Deluxe Edition PS5 (Primaria)",
+      "precio": "35000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Wuchang: Fallen Feathers Deluxe Edition PS5 (Secundaria)",
+      "precio": "35000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Fallout 4 -PS4 y PS5- (Primaria)",
+      "precio": "8000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Fallout 4 -PS4 y PS5- (Secundaria)",
+      "precio": "6000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "TopSpin 2K25 -PS4 y PS5- (Primaria)",
+      "precio": "18000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "TopSpin 2K25 -PS4 y PS5- (Secundaria)",
+      "precio": "14000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Mighty Morphin Power Rangers: Rita's Rewind (Secundaria)",
+      "precio": "13000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Kingdom Come: Deliverance II Royal Edition PS5 (Primaria)",
+      "precio": "40000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Kingdom Come: Deliverance II Royal Edition PS5 (Secundaria)",
+      "precio": "40000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Moving Out + Moving Out 2 -PS4 y PS5- (Primaria)",
+      "precio": "20000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Moving Out + Moving Out 2 -PS4 y PS5- (Secundaria)",
+      "precio": "15000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Poppy Playtime: Chapter 4 PS5 (Primaria)",
+      "precio": "20000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Poppy Playtime: Chapter 4 PS5 (Secundaria)",
+      "precio": "15000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "The Last of Us Part II Remastered (Primaria)",
+      "precio": "29000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "The Last of Us Part Deluxe Edition PS5 (Secundaria)",
+      "precio": "29000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "DEATH STRANDING 2: ON THE BEACH PS5 (Primaria)",
+      "precio": "61000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "DEATH STRANDING 2: ON THE BEACH PS5 (Secundaria)",
+      "precio": "30000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "MudRunner - American Wilds Edition (Secundaria)",
+      "precio": "7000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "The Jackbox Naughty Pack -PS4 y PS5- (Primaria)",
+      "precio": "20000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "The Jackbox Naughty Pack -PS4 y PS5- (Secundaria)",
+      "precio": "15000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Tom Clancy's Rainbow Six Siege X (Primaria)",
+      "precio": "18000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Tom Clancy's Rainbow Six Siege X (Secundaria)",
+      "precio": "14000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Teenage Mutant Ninja Turtles: Cowabunga Collection (Secundaria)",
+      "precio": "18000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "RoadCraft Rebuild Edition PS5 (Primaria)",
+      "precio": "29000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "RoadCraft Rebuild Edition PS5 (Secundaria)",
+      "precio": "29000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Taxi Life: A City Driving Simulator PS5 (Primaria)",
+      "precio": "20000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Taxi Life: A City Driving Simulator PS5 (Secundaria)",
+      "precio": "15000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Watch Dogs Legion + Watch Dogs Complete (Primaria)",
+      "precio": "21000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Watch Dogs Legion + Watch Dogs Complete (Secundaria)",
+      "precio": "20000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "LEGO Star Wars: Skywalker Saga Deluxe Edition (Secundaria)",
+      "precio": "11000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Ghostrunner 2 PS5 (Primaria)",
+      "precio": "12000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Ghostrunner 2 PS5 (Secundaria)",
+      "precio": "7000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Hell is Us PS5 (Primaria)",
+      "precio": "51000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Hell is Us PS5 (Secundaria)",
+      "precio": "51000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "REANIMAL PS5 (Primaria)",
+      "precio": "35000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "REANIMAL PS5 (Secundaria)",
+      "precio": "35000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "ELDEN RING NIGHTREIGN Deluxe Edition -PS5- (Primaria)",
+      "precio": "35000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "ELDEN RING NIGHTREIGN Deluxe Edition -PS5- (Secundaria)",
+      "precio": "35000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "ELDEN RING -PS4 y PS5- (Primaria)",
+      "precio": "27000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "ELDEN RING -PS4 y PS5- (Secundaria)",
+      "precio": "27000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Absolum -PS4 y PS5- (Primaria)",
+      "precio": "19000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Absolum -PS4 y PS5- (Secundaria)",
+      "precio": "18000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Poppy Playtime: Chapter 3 PS5 (Primaria)",
+      "precio": "18000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Poppy Playtime: Chapter 3 PS5 (Secundaria)",
+      "precio": "14000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Dead Rising 4: Frank's Big Package (Secundaria)",
+      "precio": "7000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "BLEACH Rebirth of Souls -PS4 y PS5- (Primaria)",
+      "precio": "29000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "BLEACH Rebirth of Souls -PS4 y PS5- (Secundaria)",
+      "precio": "29000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "F1 24 -PS5- (Primaria)",
+      "precio": "33000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "DRAGON BALL XENOVERSE 2 Special Edition (Primaria)",
+      "precio": "19000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "DRAGON BALL XENOVERSE 2 Special Edition (Secundaria)",
+      "precio": "13000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Horizon Zero Dawn Remastered -PS4 y PS5- (Primaria)",
+      "precio": "29000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Horizon Zero Dawn Remastered -PS4 y PS5- (Secundaria)",
+      "precio": "29000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "TMNT: Splintered Fate Heroes Bundle (Primaria)",
+      "precio": "20000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "TMNT: Splintered Fate Heroes Bundle (Secundaria)",
+      "precio": "15000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Tony Hawk's Pro Skater 1 + 2 Deluxe Bundle (Primaria)",
+      "precio": "20000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Tony Hawk's Pro Skater 1 + 2 Deluxe Bundle (Secundaria)",
+      "precio": "15000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Like a Dragon: Infinite Wealth (Primaria)",
+      "precio": "27000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Like a Dragon: Infinite Wealth (Secundaria)",
+      "precio": "27000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Police Simulator: Patrol Officers (Primaria)",
+      "precio": "22000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Police Simulator: Patrol Officers (Secundaria)",
+      "precio": "19000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Sea of Stars -PS4 y PS5- (Primaria)",
+      "precio": "22000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Sea of Stars -PS4 y PS5- (Secundaria)",
+      "precio": "19000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "The Jackbox Party Pack 10 (Primaria)",
+      "precio": "20000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "The Jackbox Party Pack 10 (Secundaria)",
+      "precio": "15000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Dead by Daylight -PS4 y PS5- (Primaria)",
+      "precio": "18000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Dead by Daylight -PS4 y PS5- (Secundaria)",
+      "precio": "14000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Tomb Raider IV-VI Remastered (Primaria)",
+      "precio": "15000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Tomb Raider IV-VI Remastered (Secundaria)",
+      "precio": "12000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "WWE 2K25 -PS4 y PS5- (Primaria)",
+      "precio": "24000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "WWE 2K25 -PS4 y PS5- (Secundaria)",
+      "precio": "22000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Sackboy: A Big Adventure (Primaria)",
+      "precio": "20000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Sackboy: A Big Adventure (Secundaria)",
+      "precio": "15000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Battlefield 6 PS5 (Primaria)",
+      "precio": "40000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Battlefield 6 PS5 (Secundaria)",
+      "precio": "27000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "EA FC 25 PS5 (Primaria)",
+      "precio": "15000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "DELTARUNE INGLÉS (Primaria)",
+      "precio": "19000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "DELTARUNE INGLÉS (Secundaria)",
+      "precio": "18000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Lost Soul Aside PS5 (Primaria)",
+      "precio": "44000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Lost Soul Aside PS5 (Secundaria)",
+      "precio": "44000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Kena: Bridge of Spirits + Moto Racer 4 (Primaria)",
+      "precio": "20000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Kena: Bridge of Spirits + Moto Racer 4 (Secundaria)",
+      "precio": "15000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Rise of the Ronin PS5 (Primaria)",
+      "precio": "29000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Rise of the Ronin PS5 (Secundaria)",
+      "precio": "18000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Monster Hunter Wilds PS5 (Primaria)",
+      "precio": "40000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Monster Hunter Wilds PS5 (Secundaria)",
+      "precio": "40000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Diablo IV + Vessel of Hatred (Primaria)",
+      "precio": "33000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Diablo IV + Vessel of Hatred (Secundaria)",
+      "precio": "33000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "GTA V -PS4 y PS5- (Primaria)",
+      "precio": "19000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "GTA V PS5 (Secundaria)",
+      "precio": "13000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Hollow Knight Voidheart Edition (Primaria)",
+      "precio": "18000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Hollow Knight Voidheart Edition (Secundaria)",
+      "precio": "14000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Hogwarts Legacy Deluxe Edition (Primaria)",
+      "precio": "14000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Hogwarts Legacy Deluxe Edition (Secundaria)",
+      "precio": "10000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "It Takes Two -PS4 y PS5- (Primaria)",
+      "precio": "14000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "It Takes Two -PS4 y PS5- (Secundaria)",
+      "precio": "10000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "The Walking Dead: The Telltale Definitive Series (Secundaria)",
+      "precio": "14000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "The Mortuary Assistant (Primaria)",
+      "precio": "19000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "The Mortuary Assistant (Secundaria)",
+      "precio": "18000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Fallout 4: GOTY Edition (Primaria)",
+      "precio": "12000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Fallout 4: GOTY Edition (Secundaria)",
+      "precio": "7000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Marvel's Spider-Man 2 PS5 (Primaria)",
+      "precio": "29000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Marvel's Spider-Man 2 PS5 (Secundaria)",
+      "precio": "29000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Gran Turismo 7 PS5 (Primaria)",
+      "precio": "19000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "HELLDIVERS 2 PS5 (Primaria)",
+      "precio": "29000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "HELLDIVERS 2 PS5 (Secundaria)",
+      "precio": "29000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "AC Triple Pack: Black Flag, Unity, Syndicate (Secundaria)",
+      "precio": "18000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Call of Duty: Modern Warfare III (Primaria)",
+      "precio": "33000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Call of Duty: Modern Warfare III (Secundaria)",
+      "precio": "33000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Call of Duty: Black Ops 7 (Primaria)",
+      "precio": "35000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Call of Duty: Black Ops 7 (Secundaria)",
+      "precio": "35000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "The Crew Motorfest (Primaria)",
+      "precio": "18000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "The Crew Motorfest (Secundaria)",
+      "precio": "14000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Cyberpunk 2077: Ultimate Edition PS5 (Primaria)",
+      "precio": "40000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Cyberpunk 2077: Ultimate Edition PS5 (Secundaria)",
+      "precio": "15000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Cyberpunk 2077 -PS4 y PS5- (Primaria)",
+      "precio": "20000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Red Dead Redemption -PS4 y PS5- (Primaria)",
+      "precio": "24000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Red Dead Redemption -PS4 y PS5- (Secundaria)",
+      "precio": "15000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Clair Obscur: Expedition 33 PS5 (Primaria)",
+      "precio": "35000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Clair Obscur: Expedition 33 PS5 (Secundaria)",
+      "precio": "35000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Demon's Souls PS5 (Primaria)",
+      "precio": "19000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Demon's Souls PS5 (Secundaria)",
+      "precio": "18000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "The Last of Us Part I PS5 (Primaria)",
+      "precio": "29000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "The Last of Us Part I PS5 (Secundaria)",
+      "precio": "29000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "The Last of Us Part II Remastered PS5 (Primaria)",
+      "precio": "29000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Ratchet & Clank: Rift Apart PS5 (Secundaria)",
+      "precio": "14000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Minecraft -PS4 y PS5- (Primaria)",
+      "precio": "19000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Minecraft -PS4 y PS5- (Secundaria)",
+      "precio": "13000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Elden Ring Shadow of the Erdtree Edition PS5 (Primaria)",
+      "precio": "68000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "ELDEN RING NIGHTREIGN Deluxe Edition -PS4 y PS5- (Primaria)",
+      "precio": "35000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "ELDEN RING NIGHTREIGN Deluxe Edition -PS4 y PS5- (Secundaria)",
+      "precio": "35000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Lies of P: Overture Bundle (Primaria)",
+      "precio": "40000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Lies of P: Overture Bundle (Secundaria)",
+      "precio": "40000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Stellar Blade Complete Edition PS5 (Primaria)",
+      "precio": "54000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Stellar Blade Complete Edition PS5 (Secundaria)",
+      "precio": "34000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Forza Horizon 5 Premium Edition PS5 (Primaria)",
+      "precio": "54000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Forza Horizon 5 Premium Edition PS5 (Secundaria)",
+      "precio": "54000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "AC Valhalla Complete PS5 (Primaria)",
+      "precio": "27000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "AC Valhalla Complete Edition -PS4 y PS5- (Secundaria)",
+      "precio": "17000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Assassin's Creed Mirage (Primaria)",
+      "precio": "19000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Assassin's Creed Mirage (Secundaria)",
+      "precio": "18000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Persona 3 Reload + Expansion Pass (Primaria)",
+      "precio": "40000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Persona 3 Reload + Expansion Pass (Secundaria)",
+      "precio": "40000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Metaphor: ReFantazio (Primaria)",
+      "precio": "34000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Metaphor: ReFantazio (Secundaria)",
+      "precio": "34000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Street Fighter 6 PS5 (Primaria)",
+      "precio": "19000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Street Fighter 6 -PS4 y PS5- (Secundaria)",
+      "precio": "18000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Call of Duty: Black Ops 6 (Primaria)",
+      "precio": "34000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Call of Duty: Black Ops 6 (Secundaria)",
+      "precio": "34000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Ghost of Yotei PS5 (Primaria)",
+      "precio": "61000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Ghost of Yotei PS5 (Secundaria)",
+      "precio": "36000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Resident Evil 4 Gold Edition (Primaria)",
+      "precio": "19000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Resident Evil 4 Gold Edition (Secundaria)",
+      "precio": "13000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "FINAL FANTASY VII REBIRTH PS5 (Primaria)",
+      "precio": "44000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "FINAL FANTASY VII REBIRTH PS5 (Secundaria)",
+      "precio": "18000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "FINAL FANTASY XVI COMPLETE EDITION PS5 (Primaria)",
+      "precio": "35000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "FINAL FANTASY XVI COMPLETE EDITION PS5 (Secundaria)",
+      "precio": "35000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Dragon Age: The Veilguard PS5 (Primaria)",
+      "precio": "34000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Dragon Age: The Veilguard PS5 (Secundaria)",
+      "precio": "34000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Mortal Kombat: Legacy Kollection (Primaria)",
+      "precio": "33000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Mortal Kombat: Legacy Kollection (Secundaria)",
+      "precio": "33000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Indiana Jones and the Great Circle + The Order of Giants (Primaria)",
+      "precio": "56000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Indiana Jones and the Great Circle + The Order of Giants (Secundaria)",
+      "precio": "56000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Mafia: The Old Country PS5 (Primaria)",
+      "precio": "35000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Mafia: The Old Country PS5 (Secundaria)",
+      "precio": "35000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "No Man's Sky -PS4 y PS5- (Primaria)",
+      "precio": "25000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "No Man's Sky -PS4 y PS5- (Secundaria)",
+      "precio": "22000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Assassin's Creed Shadows PS5 (Secundaria)",
+      "precio": "22000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "EA FC 26 PS5 (Secundaria)",
+      "precio": "22000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Satisfactory PS5 (Primaria)",
+      "precio": "33000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Satisfactory PS5 (Secundaria)",
+      "precio": "33000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Gears of War: Reloaded PS5 (Primaria)",
+      "precio": "19000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Gears of War: Reloaded PS5 (Secundaria)",
+      "precio": "18000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Resident Evil Requiem Deluxe Edition PS5 (Primaria)",
+      "precio": "69000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Resident Evil Requiem Deluxe Edition PS5 (Secundaria)",
+      "precio": "40000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "PRAGMATA PS5 (Estándar) (Primaria)",
+      "precio": "54000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "PRAGMATA PS5 (Estándar) (Secundaria)",
+      "precio": "34000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "PRAGMATA PS5 (Deluxe Edition) (Primaria)",
+      "precio": "61000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "PRAGMATA PS5 (Deluxe Edition) (Secundaria)",
+      "precio": "36000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Borderlands 4 PS5 (Primaria)",
+      "precio": "59000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Borderlands 4 PS5 (Secundaria)",
+      "precio": "59000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Hades II PS5 (Primaria)",
+      "precio": "29000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Hades II PS5 (Secundaria)",
+      "precio": "29000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Split Fiction PS5 (Primaria)",
+      "precio": "44000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Split Fiction PS5 (Secundaria)",
+      "precio": "44000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "DOOM: The Dark Ages PS5 (Primaria)",
+      "precio": "44000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "DOOM: The Dark Ages PS5 (Secundaria)",
+      "precio": "44000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Hollow Knight: Silksong (Primaria)",
+      "precio": "19000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Hollow Knight: Silksong (Secundaria)",
+      "precio": "18000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Senua's Saga: Hellblade II PS5 (Primaria)",
+      "precio": "24000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Senua's Saga: Hellblade II PS5 (Secundaria)",
+      "precio": "22000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Hi-Fi RUSH PS5 (Primaria)",
+      "precio": "24000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Hi-Fi RUSH PS5 (Secundaria)",
+      "precio": "22000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Starfield PS5 (Primaria)",
+      "precio": "44000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Starfield PS5 (Secundaria)",
+      "precio": "44000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Avowed PS5 (Primaria)",
+      "precio": "44000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Avowed PS5 (Secundaria)",
+      "precio": "44000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Yakuza 0 Director's Cut PS5 (Primaria)",
+      "precio": "44000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Yakuza 0 Director's Cut PS5 (Secundaria)",
+      "precio": "44000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "MY HERO ACADEMIA: All's Justice PS5 (Primaria)",
+      "precio": "54000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "MY HERO ACADEMIA: All's Justice PS5 (Secundaria)",
+      "precio": "54000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Shin Megami Tensei V: Vengeance (Primaria)",
+      "precio": "48000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Shin Megami Tensei V: Vengeance (Secundaria)",
+      "precio": "48000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Microsoft Flight Simulator 2024 PS5 (Primaria)",
+      "precio": "61000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Microsoft Flight Simulator 2024 PS5 (Secundaria)",
+      "precio": "36000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Balatro -PS4 y PS5- (Primaria)",
+      "precio": "15000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Balatro -PS4 y PS5- (Secundaria)",
+      "precio": "12000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Mortal Kombat 1 Definitive Edition PS5 (Primaria)",
+      "precio": "22000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Mortal Kombat 1 Khaos Reigns Kollection PS5 (Secundaria)",
+      "precio": "12000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Sea of Thieves: 2025 Deluxe Edition PS5 (Primaria)",
+      "precio": "24000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Sea of Thieves: 2025 Deluxe Edition PS5 (Secundaria)",
+      "precio": "22000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "SILENT HILL f Deluxe Edition PS5 (Primaria)",
+      "precio": "35000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "SILENT HILL f PS5 (Secundaria)",
+      "precio": "19000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Yakuza Kiwami 3 & Dark Ties (Primaria)",
+      "precio": "54000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Yakuza Kiwami 3 & Dark Ties (Secundaria)",
+      "precio": "54000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Borderlands 3: Ultimate Edition PS5 (Primaria)",
+      "precio": "19000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Borderlands 3: Ultimate Edition (Secundaria)",
+      "precio": "13000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "GTA Trilogy Definitive Edition (Primaria)",
+      "precio": "19000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "GTA Trilogy Definitive Edition (Secundaria)",
+      "precio": "13000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Killing Floor 3 PS5 (Primaria)",
+      "precio": "35000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Killing Floor 3 PS5 (Secundaria)",
+      "precio": "35000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "High On Life 2 PS5 (Primaria)",
+      "precio": "54000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "High On Life 2 PS5 (Secundaria)",
+      "precio": "54000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Dragon's Dogma 2 PS5 (Primaria)",
+      "precio": "29000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Dragon's Dogma 2 PS5 (Secundaria)",
+      "precio": "18000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Kimetsu No Yaiba: Crónicas de Hinokami 2 Deluxe (Primaria)",
+      "precio": "35000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Kimetsu No Yaiba: Crónicas de Hinokami 2 Deluxe (Secundaria)",
+      "precio": "35000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "The First Berserker: Khazan PS5 (Primaria)",
+      "precio": "40000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "The First Berserker: Khazan PS5 (Secundaria)",
+      "precio": "40000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Dying Light: The Beast PS5 (Estándar) (Secundaria)",
+      "precio": "27000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Dying Light: The Beast PS5 (Deluxe Edition) (Secundaria)",
+      "precio": "32000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Dying Light 2 Stay Human: Extras Edition (Primaria)",
+      "precio": "22000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Dying Light 2 Stay Human: Extras Edition (Secundaria)",
+      "precio": "19000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "HITMAN World of Assassination Deluxe Edition (Primaria)",
+      "precio": "40000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "HITMAN World of Assassination Deluxe Edition (Secundaria)",
+      "precio": "40000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "INAZUMA ELEVEN: Victory Road (Primaria)",
+      "precio": "59000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "INAZUMA ELEVEN: Victory Road (Secundaria)",
+      "precio": "59000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Atelier Yumia: The Alchemist of Memories (Primaria)",
+      "precio": "40000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Atelier Yumia: The Alchemist of Memories (Secundaria)",
+      "precio": "40000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "NINJA GAIDEN 4 PS5 (Primaria)",
+      "precio": "40000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Bob Esponja: Titanes de la Marea PS5 (Primaria)",
+      "precio": "35000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Bob Esponja: Titanes de la Marea PS5 (Secundaria)",
+      "precio": "35000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    }
+  ]
+}

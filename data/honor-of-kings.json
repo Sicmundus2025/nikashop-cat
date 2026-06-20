@@ -1,0 +1,116 @@
+{
+  "items": [
+    {
+      "subcategoria": "Tarjetas",
+      "producto": "Tarjeta semanal",
+      "precio": "2000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "subcategoria": "Tarjetas",
+      "producto": "Tarjeta semanal Plus",
+      "precio": "5300",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "subcategoria": "Tokens",
+      "producto": "8+8 tokens",
+      "precio": "170",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "subcategoria": "Tokens",
+      "producto": "16+16 tokens",
+      "precio": "340",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "subcategoria": "Tokens",
+      "producto": "23+23 tokens",
+      "precio": "490",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "subcategoria": "Tokens",
+      "producto": "80+80 tokens",
+      "precio": "1700",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "subcategoria": "Tokens",
+      "producto": "240+240 tokens",
+      "precio": "5100",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "subcategoria": "Tokens",
+      "producto": "400+400 tokens",
+      "precio": "8200",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "subcategoria": "Tokens",
+      "producto": "560+112 tokens",
+      "precio": "11500",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "subcategoria": "Tokens",
+      "producto": "800+160 tokens",
+      "precio": "16500",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "subcategoria": "Tokens",
+      "producto": "1200+240 tokens",
+      "precio": "24700",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "subcategoria": "Tokens",
+      "producto": "2400+480 tokens",
+      "precio": "46000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "subcategoria": "Tokens",
+      "producto": "4000+800 tokens",
+      "precio": "78000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "subcategoria": "Tokens",
+      "producto": "8000+1600 tokens",
+      "precio": "157000",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    }
+  ]
+}

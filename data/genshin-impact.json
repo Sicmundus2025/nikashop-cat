@@ -1,0 +1,53 @@
+{
+  "items": [
+    {
+      "producto": "60 Cristales",
+      "precio": "1800",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "330 Cristales",
+      "precio": "8700",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "1.090 Cristales",
+      "precio": "25400",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "2.240 Cristales",
+      "precio": "49800",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "3.880 Cristales",
+      "precio": "81300",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "8.080 Cristales",
+      "precio": "159600",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Bendición Lunar",
+      "precio": "7500",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    }
+  ]
+}

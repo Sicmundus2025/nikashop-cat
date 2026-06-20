@@ -1,0 +1,68 @@
+{
+  "items": [
+    {
+      "subcategoria": "Gemas",
+      "producto": "33 gemas",
+      "precio": "1300",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "subcategoria": "Gemas",
+      "producto": "88 gemas",
+      "precio": "3100",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "subcategoria": "Gemas",
+      "producto": "187 gemas",
+      "precio": "6250",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "subcategoria": "Gemas",
+      "producto": "396 gemas",
+      "precio": "12450",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "subcategoria": "Gemas",
+      "producto": "1.045 gemas",
+      "precio": "30900",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "subcategoria": "Pases",
+      "producto": "Brawl Pass",
+      "precio": "5400",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "subcategoria": "Pases",
+      "producto": "Brawl Pass Plus",
+      "precio": "7800",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "subcategoria": "Pases",
+      "producto": "Pro Pass",
+      "precio": "15600",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    }
+  ]
+}

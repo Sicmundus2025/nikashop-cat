@@ -16,181 +16,195 @@ collections:
   # ===== PlayStation (4 archivos según subcategoría) =====
   - name: "ps4"
     label: "PlayStation → Juegos PS4"
-    file: "data/playstation-ps4.json"
-    extension: "json"
-    format: "json"
-    fields:
-      - label: "Productos"
-        name: "items"
-        widget: "list"
-        summary: "{{fields.producto}} — ${{fields.precio}}"
-        fields: &producto_fields
-          - { label: "Producto", name: "producto", widget: "string" }
-          - { label: "Precio", name: "precio", widget: "string" }
-          - { label: "Precio Oferta (vacío si no hay oferta)", name: "precio_oferta", widget: "string", required: false }
-          - { label: "Imagen", name: "imagen", widget: "image", required: false, hint: "Subí la foto del producto" }
-          - { label: "Descripción (opcional)", name: "descripcion", widget: "text", required: false }
+    files:
+      - name: "ps4"
+        label: "PlayStation → Juegos PS4"
+        file: "data/playstation-ps4.json"
+        fields:
+          - label: "Productos"
+            name: "items"
+            widget: "list"
+            summary: "{{fields.producto}} — ${{fields.precio}}"
+            fields: &producto_fields
+              - { label: "Producto", name: "producto", widget: "string" }
+              - { label: "Precio", name: "precio", widget: "string" }
+              - { label: "Precio Oferta (vacío si no hay oferta)", name: "precio_oferta", widget: "string", required: false }
+              - { label: "Imagen", name: "imagen", widget: "image", required: false, hint: "Subí la foto del producto" }
+              - { label: "Descripción (opcional)", name: "descripcion", widget: "text", required: false }
 
   - name: "ps5"
     label: "PlayStation → Juegos PS5"
-    file: "data/playstation-ps5.json"
-    extension: "json"
-    format: "json"
-    fields:
-      - label: "Productos"
-        name: "items"
-        widget: "list"
-        summary: "{{fields.producto}} — ${{fields.precio}}"
-        fields: *producto_fields
+    files:
+      - name: "ps5"
+        label: "PlayStation → Juegos PS5"
+        file: "data/playstation-ps5.json"
+        fields:
+          - label: "Productos"
+            name: "items"
+            widget: "list"
+            summary: "{{fields.producto}} — ${{fields.precio}}"
+            fields: *producto_fields
 
   - name: "ps-ofertas"
     label: "PlayStation → Ofertas Especiales"
-    file: "data/playstation-ofertas.json"
-    extension: "json"
-    format: "json"
-    fields:
-      - label: "Productos"
-        name: "items"
-        widget: "list"
-        summary: "{{fields.producto}} — ${{fields.precio}}"
-        fields: *producto_fields
+    files:
+      - name: "ps-ofertas"
+        label: "PlayStation → Ofertas Especiales"
+        file: "data/playstation-ofertas.json"
+        fields:
+          - label: "Productos"
+            name: "items"
+            widget: "list"
+            summary: "{{fields.producto}} — ${{fields.precio}}"
+            fields: *producto_fields
 
   - name: "ps-plus"
     label: "PlayStation → PS Plus"
-    file: "data/playstation-plus.json"
-    extension: "json"
-    format: "json"
-    fields:
-      - label: "Productos"
-        name: "items"
-        widget: "list"
-        summary: "{{fields.producto}} — ${{fields.precio}}"
-        fields: *producto_fields
+    files:
+      - name: "ps-plus"
+        label: "PlayStation → PS Plus"
+        file: "data/playstation-plus.json"
+        fields:
+          - label: "Productos"
+            name: "items"
+            widget: "list"
+            summary: "{{fields.producto}} — ${{fields.precio}}"
+            fields: *producto_fields
 
   # ===== Categorías con subcategoría variable =====
   - name: "honor-of-kings"
     label: "Honor of Kings"
-    file: "data/honor-of-kings.json"
-    extension: "json"
-    format: "json"
-    fields:
-      - label: "Productos"
-        name: "items"
-        widget: "list"
-        summary: "{{fields.subcategoria}} — {{fields.producto}} (${{fields.precio}})"
-        fields: &producto_fields_sub
-          - { label: "Subcategoría (ej: Tarjetas, Tokens)", name: "subcategoria", widget: "string", required: false }
-          - { label: "Producto", name: "producto", widget: "string" }
-          - { label: "Precio", name: "precio", widget: "string" }
-          - { label: "Precio Oferta (vacío si no hay oferta)", name: "precio_oferta", widget: "string", required: false }
-          - { label: "Imagen", name: "imagen", widget: "image", required: false }
-          - { label: "Descripción (opcional)", name: "descripcion", widget: "text", required: false }
+    files:
+      - name: "honor-of-kings"
+        label: "Honor of Kings"
+        file: "data/honor-of-kings.json"
+        fields:
+          - label: "Productos"
+            name: "items"
+            widget: "list"
+            summary: "{{fields.subcategoria}} — {{fields.producto}} (${{fields.precio}})"
+            fields: &producto_fields_sub
+              - { label: "Subcategoría (ej: Tarjetas, Tokens)", name: "subcategoria", widget: "string", required: false }
+              - { label: "Producto", name: "producto", widget: "string" }
+              - { label: "Precio", name: "precio", widget: "string" }
+              - { label: "Precio Oferta (vacío si no hay oferta)", name: "precio_oferta", widget: "string", required: false }
+              - { label: "Imagen", name: "imagen", widget: "image", required: false }
+              - { label: "Descripción (opcional)", name: "descripcion", widget: "text", required: false }
 
   - name: "mobile-legends"
     label: "Mobile Legends"
-    file: "data/mobile-legends.json"
-    extension: "json"
-    format: "json"
-    fields:
-      - label: "Productos"
-        name: "items"
-        widget: "list"
-        summary: "{{fields.subcategoria}} — {{fields.producto}} (${{fields.precio}})"
-        fields: *producto_fields_sub
+    files:
+      - name: "mobile-legends"
+        label: "Mobile Legends"
+        file: "data/mobile-legends.json"
+        fields:
+          - label: "Productos"
+            name: "items"
+            widget: "list"
+            summary: "{{fields.subcategoria}} — {{fields.producto}} (${{fields.precio}})"
+            fields: *producto_fields_sub
 
   - name: "brawl-stars"
     label: "Brawl Stars"
-    file: "data/brawl-stars.json"
-    extension: "json"
-    format: "json"
-    fields:
-      - label: "Productos"
-        name: "items"
-        widget: "list"
-        summary: "{{fields.subcategoria}} — {{fields.producto}} (${{fields.precio}})"
-        fields: *producto_fields_sub
+    files:
+      - name: "brawl-stars"
+        label: "Brawl Stars"
+        file: "data/brawl-stars.json"
+        fields:
+          - label: "Productos"
+            name: "items"
+            widget: "list"
+            summary: "{{fields.subcategoria}} — {{fields.producto}} (${{fields.precio}})"
+            fields: *producto_fields_sub
 
   - name: "streaming"
     label: "Streaming"
-    file: "data/streaming.json"
-    extension: "json"
-    format: "json"
-    fields:
-      - label: "Productos"
-        name: "items"
-        widget: "list"
-        summary: "{{fields.subcategoria}} — {{fields.producto}} (${{fields.precio}})"
-        fields: *producto_fields_sub
+    files:
+      - name: "streaming"
+        label: "Streaming"
+        file: "data/streaming.json"
+        fields:
+          - label: "Productos"
+            name: "items"
+            widget: "list"
+            summary: "{{fields.subcategoria}} — {{fields.producto}} (${{fields.precio}})"
+            fields: *producto_fields_sub
 
   - name: "herramientas"
     label: "Herramientas"
-    file: "data/herramientas.json"
-    extension: "json"
-    format: "json"
-    fields:
-      - label: "Productos"
-        name: "items"
-        widget: "list"
-        summary: "{{fields.subcategoria}} — {{fields.producto}} (${{fields.precio}})"
-        fields: *producto_fields_sub
+    files:
+      - name: "herramientas"
+        label: "Herramientas"
+        file: "data/herramientas.json"
+        fields:
+          - label: "Productos"
+            name: "items"
+            widget: "list"
+            summary: "{{fields.subcategoria}} — {{fields.producto}} (${{fields.precio}})"
+            fields: *producto_fields_sub
 
   # ===== Categorías simples (sin subcategoría) =====
   - name: "genshin-impact"
     label: "Genshin Impact"
-    file: "data/genshin-impact.json"
-    extension: "json"
-    format: "json"
-    fields:
-      - label: "Productos"
-        name: "items"
-        widget: "list"
-        summary: "{{fields.producto}} — ${{fields.precio}}"
-        fields: *producto_fields
+    files:
+      - name: "genshin-impact"
+        label: "Genshin Impact"
+        file: "data/genshin-impact.json"
+        fields:
+          - label: "Productos"
+            name: "items"
+            widget: "list"
+            summary: "{{fields.producto}} — ${{fields.precio}}"
+            fields: *producto_fields
 
   - name: "free-fire"
     label: "Free Fire"
-    file: "data/free-fire.json"
-    extension: "json"
-    format: "json"
-    fields:
-      - label: "Productos"
-        name: "items"
-        widget: "list"
-        summary: "{{fields.producto}} — ${{fields.precio}}"
-        fields: *producto_fields
+    files:
+      - name: "free-fire"
+        label: "Free Fire"
+        file: "data/free-fire.json"
+        fields:
+          - label: "Productos"
+            name: "items"
+            widget: "list"
+            summary: "{{fields.producto}} — ${{fields.precio}}"
+            fields: *producto_fields
 
   - name: "musica-y-video"
     label: "Música y Video"
-    file: "data/musica-y-video.json"
-    extension: "json"
-    format: "json"
-    fields:
-      - label: "Productos"
-        name: "items"
-        widget: "list"
-        summary: "{{fields.producto}} — ${{fields.precio}}"
-        fields: *producto_fields
+    files:
+      - name: "musica-y-video"
+        label: "Música y Video"
+        file: "data/musica-y-video.json"
+        fields:
+          - label: "Productos"
+            name: "items"
+            widget: "list"
+            summary: "{{fields.producto}} — ${{fields.precio}}"
+            fields: *producto_fields
 
   - name: "roblox"
     label: "Roblox"
-    file: "data/roblox.json"
-    extension: "json"
-    format: "json"
-    fields:
-      - label: "Productos"
-        name: "items"
-        widget: "list"
-        summary: "{{fields.producto}} — ${{fields.precio}}"
-        fields: *producto_fields
+    files:
+      - name: "roblox"
+        label: "Roblox"
+        file: "data/roblox.json"
+        fields:
+          - label: "Productos"
+            name: "items"
+            widget: "list"
+            summary: "{{fields.producto}} — ${{fields.precio}}"
+            fields: *producto_fields
 
   - name: "gift-cards-steam"
     label: "Gift Cards → Steam"
-    file: "data/gift-cards-steam.json"
-    extension: "json"
-    format: "json"
-    fields:
-      - label: "Productos"
-        name: "items"
-        widget: "list"
-        summary: "{{fields.producto}} — ${{fields.precio}}"
-        fields: *producto_fields
+    files:
+      - name: "gift-cards-steam"
+        label: "Gift Cards → Steam"
+        file: "data/gift-cards-steam.json"
+        fields:
+          - label: "Productos"
+            name: "items"
+            widget: "list"
+            summary: "{{fields.producto}} — ${{fields.precio}}"
+            fields: *producto_fields

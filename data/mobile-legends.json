@@ -141,13 +141,13 @@
       "producto": "Pase Semanal",
       "precio": "2550",
       "precio_oferta": "",
-      "imagen": "",
+      "imagen": "https://www.bing.com/th/id/OIP.z_bXq1BITlds22uIpc3j_AAAAA?w=193&h=135&c=8&rs=1&qlt=90&o=6&dpr=1.4&pid=3.1&rm=2",
       "descripcion": ""
     },
     {
       "subcategoria": "Server Argentina",
       "producto": "95 Diamantes",
-      "precio": "1700",
+      "precio": "1900",
       "precio_oferta": "",
       "imagen": "",
       "descripcion": ""
@@ -155,7 +155,7 @@
     {
       "subcategoria": "Server Argentina",
       "producto": "192 Diamantes",
-      "precio": "3000",
+      "precio": "3600",
       "precio_oferta": "",
       "imagen": "",
       "descripcion": ""
@@ -163,7 +163,7 @@
     {
       "subcategoria": "Server Argentina",
       "producto": "288 Diamantes",
-      "precio": "4700",
+      "precio": "5300",
       "precio_oferta": "",
       "imagen": "",
       "descripcion": ""
@@ -171,7 +171,7 @@
     {
       "subcategoria": "Server Argentina",
       "producto": "575 Diamantes",
-      "precio": "9600",
+      "precio": "10500",
       "precio_oferta": "",
       "imagen": "",
       "descripcion": ""
@@ -179,7 +179,7 @@
     {
       "subcategoria": "Server Argentina",
       "producto": "971 Diamantes",
-      "precio": "14900",
+      "precio": "17400",
       "precio_oferta": "",
       "imagen": "",
       "descripcion": ""
@@ -187,7 +187,7 @@
     {
       "subcategoria": "Server Argentina",
       "producto": "1.494 Diamantes",
-      "precio": "23500",
+      "precio": "25000",
       "precio_oferta": "",
       "imagen": "",
       "descripcion": ""
@@ -195,7 +195,7 @@
     {
       "subcategoria": "Server Argentina",
       "producto": "3.064 Diamantes",
-      "precio": "44000",
+      "precio": "46500",
       "precio_oferta": "",
       "imagen": "",
       "descripcion": ""

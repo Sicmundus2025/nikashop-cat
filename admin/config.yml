@@ -13,6 +13,77 @@ slug:
   clean_accents: true
 
 collections:
+  # ===== Configuración general (logo del sitio) =====
+  - name: "configuracion"
+    label: "Configuración General"
+    files:
+      - name: "config-sitio"
+        label: "Logo del sitio"
+        file: "data/config-sitio.json"
+        fields:
+          - { label: "Logo de NIKASHOP", name: "logo", widget: "image", required: false, hint: "Si subís una imagen, reemplaza el ícono de la bolsa en el header y el footer" }
+
+  # ===== Imágenes de subcategorías =====
+  - name: "subcategorias-imagenes"
+    label: "Imágenes de Subcategorías"
+    files:
+      - name: "subcategorias"
+        label: "Imágenes de Subcategorías"
+        file: "data/subcategorias-imagenes.json"
+        fields:
+          - label: "Subcategorías"
+            name: "items"
+            widget: "list"
+            summary: "{{fields.categoria}} → {{fields.subcategoria}}"
+            fields:
+              - label: "Categoría"
+                name: "categoria"
+                widget: "select"
+                options:
+                  - "PlayStation"
+                  - "Honor of Kings"
+                  - "Genshin Impact"
+                  - "Free Fire"
+                  - "Mobile Legends"
+                  - "Brawl Stars"
+                  - "Streaming"
+                  - "Música y Video"
+                  - "Herramientas"
+                  - "Roblox"
+                  - "Gift Cards"
+              - { label: "Subcategoría (debe coincidir exacto)", name: "subcategoria", widget: "string" }
+              - { label: "Imagen", name: "imagen", widget: "image", required: false }
+
+  # ===== Imágenes de las categorías principales =====
+  - name: "categorias-imagenes"
+    label: "Imágenes de Categorías"
+    files:
+      - name: "categorias"
+        label: "Imágenes de Categorías"
+        file: "data/categorias.json"
+        fields:
+          - label: "Categorías"
+            name: "items"
+            widget: "list"
+            summary: "{{fields.categoria}}"
+            fields:
+              - label: "Categoría"
+                name: "categoria"
+                widget: "select"
+                options:
+                  - "PlayStation"
+                  - "Honor of Kings"
+                  - "Genshin Impact"
+                  - "Free Fire"
+                  - "Mobile Legends"
+                  - "Brawl Stars"
+                  - "Streaming"
+                  - "Música y Video"
+                  - "Herramientas"
+                  - "Roblox"
+                  - "Gift Cards"
+              - { label: "Imagen", name: "imagen", widget: "image", required: false, hint: "Foto representativa de la categoría" }
+
   # ===== PlayStation (4 archivos según subcategoría) =====
   - name: "ps4"
     label: "PlayStation → Juegos PS4"

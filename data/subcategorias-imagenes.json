@@ -1,0 +1,139 @@
+{
+  "items": [
+    {
+      "categoria": "PlayStation",
+      "subcategoria": "Juegos PS4",
+      "imagen": ""
+    },
+    {
+      "categoria": "PlayStation",
+      "subcategoria": "Juegos PS5",
+      "imagen": ""
+    },
+    {
+      "categoria": "PlayStation",
+      "subcategoria": "Ofertas Especiales",
+      "imagen": ""
+    },
+    {
+      "categoria": "PlayStation",
+      "subcategoria": "PS Plus",
+      "imagen": ""
+    },
+    {
+      "categoria": "Honor of Kings",
+      "subcategoria": "Tarjetas",
+      "imagen": ""
+    },
+    {
+      "categoria": "Honor of Kings",
+      "subcategoria": "Tokens",
+      "imagen": ""
+    },
+    {
+      "categoria": "Mobile Legends",
+      "subcategoria": "Primera Recarga (Bono)",
+      "imagen": ""
+    },
+    {
+      "categoria": "Mobile Legends",
+      "subcategoria": "Recarga Global",
+      "imagen": ""
+    },
+    {
+      "categoria": "Mobile Legends",
+      "subcategoria": "Server Argentina",
+      "imagen": ""
+    },
+    {
+      "categoria": "Brawl Stars",
+      "subcategoria": "Gemas",
+      "imagen": ""
+    },
+    {
+      "categoria": "Brawl Stars",
+      "subcategoria": "Pases",
+      "imagen": ""
+    },
+    {
+      "categoria": "Streaming",
+      "subcategoria": "Netflix",
+      "imagen": ""
+    },
+    {
+      "categoria": "Streaming",
+      "subcategoria": "Disney+",
+      "imagen": ""
+    },
+    {
+      "categoria": "Streaming",
+      "subcategoria": "HBO Max",
+      "imagen": ""
+    },
+    {
+      "categoria": "Streaming",
+      "subcategoria": "Crunchyroll",
+      "imagen": ""
+    },
+    {
+      "categoria": "Streaming",
+      "subcategoria": "Prime Video",
+      "imagen": ""
+    },
+    {
+      "categoria": "Streaming",
+      "subcategoria": "Paramount+",
+      "imagen": ""
+    },
+    {
+      "categoria": "Streaming",
+      "subcategoria": "FlujoTV",
+      "imagen": ""
+    },
+    {
+      "categoria": "Streaming",
+      "subcategoria": "IPTV",
+      "imagen": ""
+    },
+    {
+      "categoria": "Streaming",
+      "subcategoria": "Apple TV",
+      "imagen": ""
+    },
+    {
+      "categoria": "Streaming",
+      "subcategoria": "Universal+",
+      "imagen": ""
+    },
+    {
+      "categoria": "Streaming",
+      "subcategoria": "Vix",
+      "imagen": ""
+    },
+    {
+      "categoria": "Herramientas",
+      "subcategoria": "Canva Pro",
+      "imagen": ""
+    },
+    {
+      "categoria": "Herramientas",
+      "subcategoria": "CapCut",
+      "imagen": ""
+    },
+    {
+      "categoria": "Herramientas",
+      "subcategoria": "VPNs",
+      "imagen": ""
+    },
+    {
+      "categoria": "Herramientas",
+      "subcategoria": "IA",
+      "imagen": ""
+    },
+    {
+      "categoria": "Gift Cards",
+      "subcategoria": "Steam",
+      "imagen": ""
+    }
+  ]
+}

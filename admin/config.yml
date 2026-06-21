@@ -264,8 +264,34 @@ collections:
           - label: "Productos"
             name: "items"
             widget: "list"
-            summary: "{{fields.producto}} — ${{fields.precio}}"
-            fields: *producto_fields
+            summary: "{{fields.subcategoria}} — {{fields.producto}} (${{fields.precio}})"
+            fields:
+              - label: "Subcategoría"
+                name: "subcategoria"
+                widget: "select"
+                options:
+                  - "Robux"
+                  - "SAB"
+                  - "MM2"
+                  - "ADM"
+                  - "GAG"
+                  - "Grow a Garden 2"
+                  - "Rivals"
+                  - "Kick a Lucky Block"
+                  - "Slime RNG"
+                  - "Escape Tsunami For Brainrot Shops"
+                  - "Blox Fruits"
+                  - "TTD"
+                  - "Blade Ball"
+                  - "DonutSMP"
+                  - "Sailor Piece"
+                  - "Bite By Night"
+                  - "Forza Horizon 6"
+              - { label: "Producto", name: "producto", widget: "string" }
+              - { label: "Precio", name: "precio", widget: "string" }
+              - { label: "Precio Oferta (vacío si no hay oferta)", name: "precio_oferta", widget: "string", required: false }
+              - { label: "Imagen", name: "imagen", widget: "image", required: false }
+              - { label: "Descripción (opcional)", name: "descripcion", widget: "text", required: false }
 
   - name: "gift-cards-steam"
     label: "Gift Cards → Steam"
@@ -279,3 +305,132 @@ collections:
             widget: "list"
             summary: "{{fields.producto}} — ${{fields.precio}}"
             fields: *producto_fields
+
+  - name: "steam-keys"
+    label: "Steam → Keys"
+    files:
+      - name: "steam-keys"
+        label: "Steam → Keys"
+        file: "data/steam-keys.json"
+        fields:
+          - label: "Productos"
+            name: "items"
+            widget: "list"
+            summary: "{{fields.producto}} — ${{fields.precio}}"
+            fields: *producto_fields
+
+  - name: "steam-cuentas"
+    label: "Steam → Juegos (Cuentas)"
+    files:
+      - name: "steam-cuentas"
+        label: "Steam → Juegos (Cuentas)"
+        file: "data/steam-cuentas.json"
+        fields:
+          - label: "Productos"
+            name: "items"
+            widget: "list"
+            summary: "{{fields.producto}} — ${{fields.precio}}"
+            fields: *producto_fields
+
+  - name: "fortnite"
+    label: "Fortnite"
+    files:
+      - name: "fortnite"
+        label: "Fortnite"
+        file: "data/fortnite.json"
+        fields:
+          - label: "Productos"
+            name: "items"
+            widget: "list"
+            summary: "{{fields.producto}} — ${{fields.precio}}"
+            fields: *producto_fields
+
+  - name: "pubg"
+    label: "PUBG"
+    files:
+      - name: "pubg"
+        label: "PUBG"
+        file: "data/pubg.json"
+        fields:
+          - label: "Productos"
+            name: "items"
+            widget: "list"
+            summary: "{{fields.producto}} — ${{fields.precio}}"
+            fields: *producto_fields
+
+  - name: "delta-force"
+    label: "Delta Force"
+    files:
+      - name: "delta-force"
+        label: "Delta Force"
+        file: "data/delta-force.json"
+        fields:
+          - label: "Productos"
+            name: "items"
+            widget: "list"
+            summary: "{{fields.producto}} — ${{fields.precio}}"
+            fields: *producto_fields
+
+  - name: "blood-strike"
+    label: "Blood Strike"
+    files:
+      - name: "blood-strike"
+        label: "Blood Strike"
+        file: "data/blood-strike.json"
+        fields:
+          - label: "Productos"
+            name: "items"
+            widget: "list"
+            summary: "{{fields.producto}} — ${{fields.precio}}"
+            fields: *producto_fields
+
+  - name: "magic-chess-go-go"
+    label: "Magic Chess: Go Go"
+    files:
+      - name: "magic-chess-go-go"
+        label: "Magic Chess: Go Go"
+        file: "data/magic-chess-go-go.json"
+        fields:
+          - label: "Productos"
+            name: "items"
+            widget: "list"
+            summary: "{{fields.producto}} — ${{fields.precio}}"
+            fields: *producto_fields
+
+  - name: "honkai-star-rail"
+    label: "Honkai: Star Rail"
+    files:
+      - name: "honkai-star-rail"
+        label: "Honkai: Star Rail"
+        file: "data/honkai-star-rail.json"
+        fields:
+          - label: "Productos"
+            name: "items"
+            widget: "list"
+            summary: "{{fields.producto}} — ${{fields.precio}}"
+            fields: *producto_fields
+
+  - name: "redes-sociales"
+    label: "Redes Sociales"
+    files:
+      - name: "redes-sociales"
+        label: "Redes Sociales"
+        file: "data/redes-sociales.json"
+        fields:
+          - label: "Productos"
+            name: "items"
+            widget: "list"
+            summary: "{{fields.subcategoria}} — {{fields.producto}} (${{fields.precio}})"
+            fields:
+              - label: "Plataforma"
+                name: "subcategoria"
+                widget: "select"
+                options:
+                  - "TikTok"
+                  - "Instagram"
+                  - "Facebook"
+              - { label: "Producto (ej: 1000 Seguidores)", name: "producto", widget: "string" }
+              - { label: "Precio", name: "precio", widget: "string" }
+              - { label: "Precio Oferta (vacío si no hay oferta)", name: "precio_oferta", widget: "string", required: false }
+              - { label: "Imagen", name: "imagen", widget: "image", required: false }
+              - { label: "Descripción (opcional)", name: "descripcion", widget: "text", required: false }

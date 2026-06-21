@@ -1,0 +1,585 @@
+{
+  "items": [
+    {
+      "producto": "PAYDAY The Heist",
+      "precio": "2400",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Left 4 Dead 2",
+      "precio": "2400",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Wallpaper Engine",
+      "precio": "2450",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Five Nights at Freddy's: Security Breach",
+      "precio": "2450",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Supermarket Simulator",
+      "precio": "2650",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Garry's Mod",
+      "precio": "2750",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Geometry Dash",
+      "precio": "2750",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "METAL GEAR SOLID V: The Definitive Experience",
+      "precio": "2850",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "WorldBox - God Simulator",
+      "precio": "2850",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Terraria",
+      "precio": "2900",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Car Dealer Simulator 2025",
+      "precio": "3300",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Alien: Isolation Collection",
+      "precio": "3300",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "The Forest",
+      "precio": "3300",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Streamer Life Simulator 2 + 1",
+      "precio": "3350",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Bully - Scholarship Edition",
+      "precio": "3500",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "NO, I'M NOT A HUMAN",
+      "precio": "3800",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Mortal Kombat 11 Ultimate + Injustice 2 Legendary",
+      "precio": "3800",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Grand Theft Auto: San Andreas",
+      "precio": "3950",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Project Zomboid",
+      "precio": "3950",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "A Plague Tale: Requiem + Protector Pack DLC",
+      "precio": "4150",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Phasmophobia",
+      "precio": "4150",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Sons Of The Forest",
+      "precio": "4200",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Schedule I",
+      "precio": "4750",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Stray",
+      "precio": "4800",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Batman: Arkham Collection",
+      "precio": "4800",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Dispatch Deluxe Edition",
+      "precio": "4950",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Stardew Valley + Graveyard Keeper + Terraria",
+      "precio": "5100",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Resident Evil 7 Biohazard Gold Edition",
+      "precio": "5200",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Quarantine Zone: The Last Check",
+      "precio": "5200",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "TES V: SKYRIM - ANNIVERSARY EDITION",
+      "precio": "5300",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "DYING LIGHT 2 ULTIMATE - ALL DLC + THE BEAST",
+      "precio": "5550",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Sifu + Sifu Deluxe Cosmetic Pack",
+      "precio": "5550",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Detroit: Become Human",
+      "precio": "5550",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Grounded",
+      "precio": "5700",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "HITMAN 3 DELUXE + 7 DEADLY SINS PACK",
+      "precio": "5750",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Marvel's Spider-Man: Miles Morales",
+      "precio": "5750",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Cities: Skylines II - Ultimate Edition",
+      "precio": "5900",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "STAR WARS Jedi: Survivor Deluxe Edition",
+      "precio": "5900",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Marvel's Spider-Man Remastered",
+      "precio": "7050",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Dragon Ball Z: Kakarot",
+      "precio": "7050",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "UNCHARTED: Legacy of Thieves Collection",
+      "precio": "7650",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Ready Or Not",
+      "precio": "7650",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Cyberpunk 2077 + DLC Phantom Liberty",
+      "precio": "7700",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Subnautica 2 + Complete Bundle (2 + 1 + Below Zero)",
+      "precio": "7700",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "It Takes Two + A Way Out",
+      "precio": "7700",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Cyberpunk 2077",
+      "precio": "7700",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Horizon Zero Dawn Complete",
+      "precio": "7800",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "NARUTO SHIPPUDEN: Ultimate Ninja STORM Legacy",
+      "precio": "7900",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Resident Evil 8 Village Gold Edition",
+      "precio": "7900",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "REANIMAL - Deluxe Edition",
+      "precio": "8050",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "DEAD ISLAND 2 - ULTIMATE + ALL DLC (Epic Games)",
+      "precio": "8050",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Grand Theft Auto V",
+      "precio": "8050",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "God of War (2018)",
+      "precio": "8350",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "DIRECTIVE 8020: DIGITAL DELUXE EDITION",
+      "precio": "8700",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Dark Souls III Deluxe Edition",
+      "precio": "8750",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Undisputed WBC Edition",
+      "precio": "8750",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Sekiro: Shadows Die Twice",
+      "precio": "8900",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Resident Evil 4 Remake",
+      "precio": "9250",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Mortal Kombat 1 Premium Edition",
+      "precio": "9300",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Resident Evil 2 + 3 Remakes",
+      "precio": "9300",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Ghost of Tsushima Director's Cut",
+      "precio": "9600",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "God of War Ragnarok Deluxe + God of War",
+      "precio": "9900",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Red Dead Redemption 2 Ultimate Edition",
+      "precio": "9900",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Silent Hill 2 (2024) Deluxe",
+      "precio": "10150",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Split Fiction",
+      "precio": "10500",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Elden Ring - Shadow of the Erdtree",
+      "precio": "10750",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "JURASSIC WORLD EVOLUTION 3 - DELUXE",
+      "precio": "10850",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Baldur's Gate 3",
+      "precio": "11150",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Dragon Ball: Sparking! Zero Ultimate Edition",
+      "precio": "11150",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Black Myth: Wukong Deluxe Edition",
+      "precio": "11150",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "ASSASSIN'S CREED SHADOWS - DELUXE + CLAWS OF AWAJI",
+      "precio": "11250",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "The Last of Us Part II Remastered",
+      "precio": "11550",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "F1 25: Iconic Edition",
+      "precio": "11800",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "007 First Light All DLC",
+      "precio": "12100",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Pragmata Deluxe Edition",
+      "precio": "12750",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Marvel's Spider-Man 2 Deluxe",
+      "precio": "12850",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "STELLAR BLADE Complete Edition",
+      "precio": "13350",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "LEGO Batman: Legacy of the Dark Knight Deluxe Edition",
+      "precio": "13550",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Forza Horizon 6 Premium Edition",
+      "precio": "14750",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Resident Evil Requiem Deluxe Edition",
+      "precio": "14750",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Ea Sports FC 26 + FC25",
+      "precio": "14750",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "The Last of Us Part I Deluxe Edition",
+      "precio": "15200",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "producto": "Red Dead Redemption 2 Ultimate Edition ONLINE",
+      "precio": "20150",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    }
+  ]
+}

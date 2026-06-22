@@ -17,12 +17,12 @@
       "imagen": "https://wallpaperaccess.com/full/10733703.jpg"
     },
     {
-      "categoria": "Honor of Kings",
-      "imagen": "https://www.honorofkings.com/esports/ossweb-img/share_v2.jpg"
-    },
-    {
       "categoria": "Roblox",
       "imagen": "https://image.winudf.com/v2/image1/Y29tLnJvYmxveC5jbGllbnRfaWNvbl8xNzQ1NDU4ODA5XzA1OQ/icon.png?w=360&fakeurl=1"
+    },
+    {
+      "categoria": "Honor of Kings",
+      "imagen": "https://www.honorofkings.com/esports/ossweb-img/share_v2.jpg"
     },
     {
       "categoria": "Free Fire",
@@ -31,6 +31,10 @@
     {
       "categoria": "Música y Video",
       "imagen": "https://cdn.mos.cms.futurecdn.net/84in3B8FAdzVuL46FdFo85-1200-80.jpg"
+    },
+    {
+      "categoria": "Brawl Stars",
+      "imagen": "/images/1000864880.jpg"
     }
   ]
 }

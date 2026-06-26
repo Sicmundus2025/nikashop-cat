@@ -1,0 +1,10 @@
+{
+  "items": [
+    { "producto": "105 Oro", "precio": "1400" },
+    { "producto": "320 Oro", "precio": "4250" },
+    { "producto": "540 Oro", "precio": "6850" },
+    { "producto": "1100 Oro", "precio": "13450" },
+    { "producto": "2260 Oro", "precio": "26300" },
+    { "producto": "5800 Oro", "precio": "64300" }
+  ]
+}

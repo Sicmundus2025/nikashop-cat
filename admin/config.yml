@@ -51,6 +51,11 @@ collections:
                   - "Herramientas"
                   - "Roblox"
                   - "Gift Cards"
+                  - "Arena Breakout"
+                  - "Wuthering Waves"
+                  - "Marvel Rivals"
+                  - "Blood Strike"
+                  - "Delta Force"
               - { label: "Subcategoría (debe coincidir exacto)", name: "subcategoria", widget: "string" }
               - { label: "Imagen", name: "imagen", widget: "image", required: false }
 
@@ -82,6 +87,11 @@ collections:
                   - "Herramientas"
                   - "Roblox"
                   - "Gift Cards"
+                  - "Arena Breakout"
+                  - "Wuthering Waves"
+                  - "Marvel Rivals"
+                  - "Blood Strike"
+                  - "Delta Force"
               - { label: "Imagen", name: "imagen", widget: "image", required: false, hint: "Foto representativa de la categoría" }
 
   # ===== PlayStation (4 archivos según subcategoría) =====
@@ -403,6 +413,45 @@ collections:
       - name: "honkai-star-rail"
         label: "Honkai: Star Rail"
         file: "data/honkai-star-rail.json"
+        fields:
+          - label: "Productos"
+            name: "items"
+            widget: "list"
+            summary: "{{fields.producto}} — ${{fields.precio}}"
+            fields: *producto_fields
+
+  - name: "arena-breakout"
+    label: "Arena Breakout"
+    files:
+      - name: "arena-breakout"
+        label: "Arena Breakout"
+        file: "data/arena-breakout.json"
+        fields:
+          - label: "Productos"
+            name: "items"
+            widget: "list"
+            summary: "{{fields.producto}} — ${{fields.precio}}"
+            fields: *producto_fields
+
+  - name: "wuthering-waves"
+    label: "Wuthering Waves"
+    files:
+      - name: "wuthering-waves"
+        label: "Wuthering Waves"
+        file: "data/wuthering-waves.json"
+        fields:
+          - label: "Productos"
+            name: "items"
+            widget: "list"
+            summary: "{{fields.producto}} — ${{fields.precio}}"
+            fields: *producto_fields
+
+  - name: "marvel-rivals"
+    label: "Marvel Rivals"
+    files:
+      - name: "marvel-rivals"
+        label: "Marvel Rivals"
+        file: "data/marvel-rivals.json"
         fields:
           - label: "Productos"
             name: "items"

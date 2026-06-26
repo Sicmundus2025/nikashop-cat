@@ -1,7 +1,7 @@
 backend:
   name: github
   repo: Sicmundus2025/nikashop-cat
-  branch: main
+  branch: staging
 
 # Las imágenes que subas desde el panel se guardan acá, dentro del repo
 media_folder: "images"

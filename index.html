@@ -8,7 +8,64 @@
 <meta name="description" content="Diamantes, juegos, suscripciones y gift cards con entrega rápida y soporte personalizado. Recargas y servicios digitales para gamers de Argentina y Latinoamérica.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<style>
+.id-verifier-box{
+  max-width:1100px;
+  margin:18px auto 0;
+  padding:18px 20px;
+  background:#1a1a1a;
+  border:1px solid #FF6A00;
+  border-radius:14px;
+}
+.id-verifier-title{
+  margin:0 0 2px;
+  font-weight:700;
+  font-size:1.02rem;
+  color:#FFD000;
+}
+.id-verifier-sub{
+  margin:0 0 12px;
+  font-size:.85rem;
+  color:#b8b8b8;
+}
+.id-verifier-row{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+}
+.id-verifier-row input{
+  flex:1 1 180px;
+  padding:10px 12px;
+  border-radius:10px;
+  border:1px solid #333;
+  background:#0E0E0E;
+  color:#fff;
+  font-size:.95rem;
+}
+.id-verifier-row input:focus{
+  outline:none;
+  border-color:#FF6A00;
+}
+.id-verifier-row .btn-buy{
+  flex:0 0 auto;
+  white-space:nowrap;
+}
+.id-verifier-result{
+  margin-top:12px;
+  padding:10px 12px;
+  border-radius:10px;
+  font-size:.9rem;
+  line-height:1.4;
+}
+.id-verifier-result.success{
+  background:rgba(46,204,113,.12);
+  border:1px solid #2ecc71;
+  color:#9be8b5;
+}
+.id-verifier-result.error{
+  background:rgba(255,106,0,.10);
+  border:1px solid #FF6A00;
+  color:#ffb27a;
+}<style>
   :root{
     --black:#0E0E0E;
     --black-2:#151515;

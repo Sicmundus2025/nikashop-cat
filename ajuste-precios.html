@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NIKASHOP — Ajuste de Precios</title>
+<style>
+  :root{
+    --black:#0E0E0E; --black-2:#151515; --black-3:#1B1B1B;
+    --orange:#FF6A00; --yellow:#FFD000; --white:#fff; --muted:#A3A3A3; --border:rgba(255,255,255,0.08);
+  }
+  *{box-sizing:border-box;}
+  body{background:var(--black);color:var(--white);font-family:system-ui,-apple-system,sans-serif;margin:0;padding:18px;line-height:1.5;}
+  h1{font-size:19px;margin-bottom:4px;}
+  .subtitle{color:var(--muted);font-size:12.5px;margin-bottom:20px;}
+  .card{background:var(--black-2);border:1px solid var(--border);border-radius:14px;padding:16px;margin-bottom:16px;}
+  label{display:block;font-size:12.5px;font-weight:600;margin-bottom:6px;color:var(--muted);}
+  select, input[type=number], input[type=text]{
+    width:100%;background:var(--black-3);border:1px solid var(--border);border-radius:8px;
+    padding:10px 12px;color:var(--white);font-size:14px;margin-bottom:12px;font-family:inherit;
+  }
+  button{
+    background:var(--orange);color:var(--black);border:none;border-radius:8px;
+    padding:12px 16px;font-weight:700;font-size:13.5px;cursor:pointer;width:100%;
+  }
+  button.secondary{background:var(--black-3);color:var(--white);border:1px solid var(--border);font-weight:600;}
+  .row{display:flex;gap:10px;}
+  .row > *{flex:1;}
+  .product-row{display:flex;align-items:center;gap:10px;padding:9px 0;border-bottom:1px solid var(--border);font-size:13px;}
+  .product-row:last-child{border-bottom:none;}
+  .product-row input[type=checkbox]{width:18px;height:18px;flex-shrink:0;accent-color:var(--orange);}
+  .product-info{flex:1;min-width:0;}
+  .product-name{font-weight:600;}
+  .product-sub{color:var(--muted);font-size:11px;}
+  .price-display{font-size:12px;text-align:right;flex-shrink:0;}
+  .price-old{color:var(--muted);}
+  .price-new{color:var(--orange);font-weight:700;}
+  .arrow{color:var(--muted);margin:0 3px;}
+  #productList{max-height:400px;overflow-y:auto;}
+  .select-actions{display:flex;gap:8px;margin-bottom:10px;}
+  .select-actions button{font-size:12px;padding:8px;}
+  #jsonOutput{
+    width:100%;min-height:150px;background:var(--black-3);border:1px solid var(--border);
+    border-radius:8px;color:var(--white);font-family:monospace;font-size:11px;padding:10px;margin-bottom:12px;
+  }
+  .toast{
+    position:fixed;bottom:20px;left:50%;transform:translate(-50%,10px);background:var(--black-3);
+    border:1px solid var(--orange);color:var(--white);padding:10px 18px;border-radius:999px;
+    font-size:13px;opacity:0;transition:opacity .3s, transform .3s;pointer-events:none;
+  }
+  .toast.show{opacity:1;transform:translate(-50%,0);}
+  .instructions{font-size:12.5px;color:var(--muted);line-height:1.6;margin:0;}
+  .instructions ol{padding-left:18px;margin:6px 0 0;}
+  .checkbox-label{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--white);margin-bottom:12px;}
+  .checkbox-label input{width:auto;margin:0;accent-color:var(--orange);}
+  .note{font-size:11.5px;color:var(--muted);margin-top:18px;}
+</style>
+</head>
+<body>
+  <h1>🛠️ Ajuste de Precios por Porcentaje</h1>
+  <p class="subtitle">Herramienta interna de NIKASHOP — no aparece en el menú ni la ven tus clientes.</p>
+
+  <div class="card">
+    <label>Archivo de categoría</label>
+    <select id="fileSelect">
+      <option value="">Elegí una categoría...</option>
+      <option value="data/playstation-ps4.json">PlayStation → Juegos PS4</option>
+      <option value="data/playstation-ps5.json">PlayStation → Juegos PS5</option>
+      <option value="data/playstation-ofertas.json">PlayStation → Ofertas Especiales</option>
+      <option value="data/playstation-plus.json">PlayStation → PS Plus</option>
+      <option value="data/honor-of-kings.json">Honor of Kings</option>
+      <option value="data/genshin-impact.json">Genshin Impact</option>
+      <option value="data/free-fire.json">Free Fire</option>
+      <option value="data/mobile-legends.json">Mobile Legends</option>
+      <option value="data/brawl-stars.json">Brawl Stars</option>
+      <option value="data/streaming.json">Streaming</option>
+      <option value="data/musica-y-video.json">Música y Video</option>
+      <option value="data/herramientas.json">Herramientas</option>
+      <option value="data/roblox.json">Roblox</option>
+      <option value="data/gift-cards-steam.json">Gift Cards → Steam</option>
+      <option value="data/steam-keys.json">Steam → Keys</option>
+      <option value="data/steam-cuentas.json">Steam → Juegos (Cuentas)</option>
+      <option value="data/fortnite.json">Fortnite</option>
+      <option value="data/pubg.json">PUBG</option>
+      <option value="data/delta-force.json">Delta Force</option>
+      <option value="data/blood-strike.json">Blood Strike</option>
+      <option value="data/magic-chess-go-go.json">Magic Chess: Go Go</option>
+      <option value="data/honkai-star-rail.json">Honkai: Star Rail</option>
+      <option value="data/redes-sociales.json">Redes Sociales</option>
+      <option value="otro">Otro archivo (escribir ruta)...</option>
+    </select>
+    <input type="text" id="customPath" placeholder="ej: data/mi-categoria.json" style="display:none;">
+    <button id="loadBtn">Cargar productos</button>
+  </div>
+
+  <div class="card" id="configCard" style="display:none;">
+    <div class="row">
+      <div>
+        <label>Porcentaje (+ sube, − baja)</label>
+        <input type="number" id="percentInput" placeholder="ej: 11 ó -5" step="0.1">
+      </div>
+      <div>
+        <label>Redondear a</label>
+        <select id="roundSelect">
+          <option value="0">Sin redondeo</option>
+          <option value="50" selected>Cada $50</option>
+          <option value="100">Cada $100</option>
+          <option value="500">Cada $500</option>
+          <option value="1000">Cada $1000</option>
+        </select>
+      </div>
+    </div>
+    <label class="checkbox-label">
+      <input type="checkbox" id="applyToOffer" checked> Aplicar el mismo % al Precio Oferta (si tiene)
+    </label>
+    <button id="calcBtn">Calcular precios nuevos</button>
+  </div>
+
+  <div class="card" id="listCard" style="display:none;">
+    <div class="select-actions">
+      <button class="secondary" id="selectAllBtn">Seleccionar todos</button>
+      <button class="secondary" id="selectNoneBtn">Ninguno</button>
+    </div>
+    <div id="productList"></div>
+  </div>
+
+  <div class="card" id="outputCard" style="display:none;">
+    <label>JSON actualizado</label>
+    <textarea id="jsonOutput" readonly></textarea>
+    <button id="copyBtn">📋 Copiar JSON</button>
+    <p class="instructions">
+      <strong>Cómo aplicarlo:</strong>
+      <ol>
+        <li>Tocá "Copiar JSON" arriba</li>
+        <li>Entrá a GitHub, al mismo archivo que elegiste (carpeta <code>data/</code>)</li>
+        <li>Tocá el lápiz ✏️ para editar</li>
+        <li>Borrá todo el contenido viejo y pegá el nuevo</li>
+        <li>Commit changes</li>
+      </ol>
+    </p>
+  </div>
+
+  <p class="note">Nota: esta página lee los mismos datos públicos de tu catálogo (los precios ya son visibles en tu sitio). No tiene forma de guardar cambios sola — siempre tenés que confirmar pegando el resultado en GitHub vos mismo, así no hay riesgo de que algo se suba sin que lo revises.</p>
+
+  <div id="toast" class="toast"></div>
+
+<script>
+  let currentItems = [];
+
+  const fileSelect = document.getElementById('fileSelect');
+  const customPath = document.getElementById('customPath');
+  fileSelect.addEventListener('change', () => {
+    customPath.style.display = fileSelect.value === 'otro' ? 'block' : 'none';
+  });
+
+  function showToast(msg){
+    const t = document.getElementById('toast');
+    t.textContent = msg;
+    t.classList.add('show');
+    clearTimeout(t._timer);
+    t._timer = setTimeout(() => t.classList.remove('show'), 2200);
+  }
+
+  function escapeHTML(str){
+    return String(str).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  }
+
+  function money(n){
+    const num = parseFloat(n);
+    return isNaN(num) ? '' : '$' + num.toLocaleString('es-AR');
+  }
+
+  document.getElementById('loadBtn').addEventListener('click', async () => {
+    const path = fileSelect.value === 'otro' ? customPath.value.trim() : fileSelect.value;
+    if(!path){ showToast('Elegí un archivo primero'); return; }
+    try {
+      const res = await fetch(path, { cache: 'no-cache' });
+      if(!res.ok) throw new Error('No se pudo cargar');
+      const data = await res.json();
+      currentItems = Array.isArray(data) ? data : (data.items || []);
+      if(!currentItems.length){ showToast('Ese archivo está vacío'); return; }
+      renderProductList();
+      document.getElementById('configCard').style.display = 'block';
+      document.getElementById('listCard').style.display = 'block';
+      document.getElementById('outputCard').style.display = 'none';
+      showToast(`Cargados ${currentItems.length} productos`);
+    } catch(err) {
+      showToast('Error al cargar — revisá la ruta del archivo');
+    }
+  });
+
+  function renderProductList(){
+    const list = document.getElementById('productList');
+    list.innerHTML = currentItems.map((it, i) => `
+      <div class="product-row">
+        <input type="checkbox" class="item-check" data-i="${i}" checked>
+        <div class="product-info">
+          <div class="product-name">${escapeHTML(it.producto || '(sin nombre)')}</div>
+          ${it.subcategoria ? `<div class="product-sub">${escapeHTML(it.subcategoria)}</div>` : ''}
+        </div>
+        <div class="price-display" data-i="${i}">${money(it.precio)}</div>
+      </div>
+    `).join('');
+  }
+
+  document.getElementById('selectAllBtn').addEventListener('click', () => {
+    document.querySelectorAll('.item-check').forEach(cb => cb.checked = true);
+  });
+  document.getElementById('selectNoneBtn').addEventListener('click', () => {
+    document.querySelectorAll('.item-check').forEach(cb => cb.checked = false);
+  });
+
+  function roundTo(value, unit){
+    if(!unit) return Math.round(value);
+    return Math.round(value / unit) * unit;
+  }
+
+  document.getElementById('calcBtn').addEventListener('click', () => {
+    const pct = parseFloat(document.getElementById('percentInput').value);
+    if(isNaN(pct)){ showToast('Ingresá un porcentaje válido'); return; }
+    const roundUnit = parseInt(document.getElementById('roundSelect').value, 10);
+    const applyOffer = document.getElementById('applyToOffer').checked;
+    const factor = 1 + (pct / 100);
+
+    document.querySelectorAll('.item-check').forEach(cb => {
+      const i = parseInt(cb.dataset.i, 10);
+      const item = currentItems[i];
+      const priceDisplay = document.querySelector(`.price-display[data-i="${i}"]`);
+      if(cb.checked){
+        const oldPrice = parseFloat(item.precio) || 0;
+        const newPrice = roundTo(oldPrice * factor, roundUnit);
+        item._newPrecio = newPrice;
+        let oferLine = '';
+        if(applyOffer && item.precio_oferta){
+          const oldOfer = parseFloat(item.precio_oferta) || 0;
+          const newOfer = roundTo(oldOfer * factor, roundUnit);
+          item._newOferta = newOfer;
+          oferLine = `<br><span style="color:var(--muted);font-size:10.5px;">oferta ${money(oldOfer)}→${money(newOfer)}</span>`;
+        } else {
+          delete item._newOferta;
+        }
+        priceDisplay.innerHTML = `<span class="price-old">${money(oldPrice)}</span><span class="arrow">→</span><span class="price-new">${money(newPrice)}</span>${oferLine}`;
+      } else {
+        delete item._newPrecio;
+        delete item._newOferta;
+        priceDisplay.innerHTML = money(item.precio);
+      }
+    });
+
+    generateOutput();
+    document.getElementById('outputCard').style.display = 'block';
+    document.getElementById('outputCard').scrollIntoView({ behavior: 'smooth' });
+  });
+
+  function generateOutput(){
+    const updated = currentItems.map(it => {
+      const clean = Object.assign({}, it);
+      if(clean._newPrecio !== undefined) clean.precio = String(clean._newPrecio);
+      if(clean._newOferta !== undefined) clean.precio_oferta = String(clean._newOferta);
+      delete clean._newPrecio;
+      delete clean._newOferta;
+      return clean;
+    });
+    document.getElementById('jsonOutput').value = JSON.stringify({ items: updated }, null, 2);
+  }
+
+  document.getElementById('copyBtn').addEventListener('click', async () => {
+    const text = document.getElementById('jsonOutput').value;
+    try {
+      await navigator.clipboard.writeText(text);
+      showToast('¡Copiado! Pegalo en GitHub');
+    } catch(err) {
+      const ta = document.getElementById('jsonOutput');
+      ta.select();
+      document.execCommand('copy');
+      showToast('¡Copiado! Pegalo en GitHub');
+    }
+  });
+</script>
+</body>
+</html>

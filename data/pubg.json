@@ -1,3 +1,52 @@
 {
-  "items": []
+  "items": [
+    {
+      "subcategoria": "UC",
+      "producto": "60 UC",
+      "precio": "1600",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "subcategoria": "UC",
+      "producto": "300 + 25 UC",
+      "precio": "7900",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "subcategoria": "UC",
+      "producto": "600 + 60 UC",
+      "precio": "15550",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "subcategoria": "UC",
+      "producto": "1500 + 300 UC",
+      "precio": "38150",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "subcategoria": "UC",
+      "producto": "3000 + 850 UC",
+      "precio": "75250",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
+      "subcategoria": "UC",
+      "producto": "6000 + 2100 UC",
+      "precio": "148500",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    }
+  ]
 }

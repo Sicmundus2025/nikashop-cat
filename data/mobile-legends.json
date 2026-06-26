@@ -147,7 +147,7 @@
     {
       "subcategoria": "Server Argentina",
       "producto": "95 Diamantes",
-      "precio": "1900",
+      "precio": "2000",
       "precio_oferta": "",
       "imagen": "",
       "descripcion": ""
@@ -156,7 +156,7 @@
       "subcategoria": "Server Argentina",
       "producto": "192 Diamantes",
       "precio": "3600",
-      "precio_oferta": "",
+      "precio_oferta": "3500",
       "imagen": "",
       "descripcion": ""
     },
@@ -164,7 +164,7 @@
       "subcategoria": "Server Argentina",
       "producto": "288 Diamantes",
       "precio": "5300",
-      "precio_oferta": "",
+      "precio_oferta": "5000",
       "imagen": "",
       "descripcion": ""
     },
@@ -172,15 +172,15 @@
       "subcategoria": "Server Argentina",
       "producto": "575 Diamantes",
       "precio": "10500",
-      "precio_oferta": "",
+      "precio_oferta": "9800",
       "imagen": "",
       "descripcion": ""
     },
     {
       "subcategoria": "Server Argentina",
       "producto": "971 Diamantes",
-      "precio": "17400",
-      "precio_oferta": "",
+      "precio": "17500",
+      "precio_oferta": "16000",
       "imagen": "",
       "descripcion": ""
     },
@@ -188,7 +188,7 @@
       "subcategoria": "Server Argentina",
       "producto": "1.494 Diamantes",
       "precio": "25000",
-      "precio_oferta": "",
+      "precio_oferta": "23500",
       "imagen": "",
       "descripcion": ""
     },
@@ -196,15 +196,15 @@
       "subcategoria": "Server Argentina",
       "producto": "3.064 Diamantes",
       "precio": "46500",
-      "precio_oferta": "",
+      "precio_oferta": "45000",
       "imagen": "",
       "descripcion": ""
     },
     {
       "subcategoria": "Server Argentina",
       "producto": "6.210 Diamantes",
-      "precio": "89500",
-      "precio_oferta": "",
+      "precio": "90000",
+      "precio_oferta": "88500",
       "imagen": "",
       "descripcion": ""
     }

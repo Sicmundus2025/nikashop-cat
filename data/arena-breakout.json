@@ -1,0 +1,16 @@
+{
+  "items": [
+    { "producto": "60+6 CP", "precio": "1350" },
+    { "producto": "310+25 CP", "precio": "3900" },
+    { "producto": "630+45 CP", "precio": "6450" },
+    { "producto": "1580+110 CP", "precio": "12850" },
+    { "producto": "3200+200 CP", "precio": "25450" },
+    { "producto": "6500+320 CP", "precio": "63000" },
+    { "producto": "Selección para Principiantes", "precio": "1250" },
+    { "producto": "Pase de Batalla Avanzado Mensual", "precio": "1550" },
+    { "producto": "Privilegios de Caja Antibalas", "precio": "3700" },
+    { "producto": "Pase de Batalla Premium Mensual", "precio": "6650" },
+    { "producto": "Privilegios de Caja Compuesta", "precio": "12100" },
+    { "producto": "Paquete Pase Premium Trimestral", "precio": "19050" }
+  ]
+}

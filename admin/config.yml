@@ -7,7 +7,7 @@ backend:
 media_folder: "images"
 public_folder: "/images"
 
-publish_mode: editorial_workflow
+publish_mode: simple
 slug:
   encoding: "ascii"
   clean_accents: true

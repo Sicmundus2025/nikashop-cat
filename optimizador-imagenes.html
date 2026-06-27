@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NIKASHOP — Optimizador de Imágenes</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+<style>
+  :root{
+    --black:#0E0E0E; --black-2:#151515; --black-3:#1B1B1B;
+    --orange:#FF6A00; --yellow:#FFD000; --white:#fff; --muted:#A3A3A3; --border:rgba(255,255,255,0.08);
+  }
+  *{box-sizing:border-box;}
+  body{background:var(--black);color:var(--white);font-family:system-ui,-apple-system,sans-serif;margin:0;padding:18px;line-height:1.5;}
+  h1{font-size:19px;margin-bottom:4px;}
+  .subtitle{color:var(--muted);font-size:12.5px;margin-bottom:20px;}
+  .card{background:var(--black-2);border:1px solid var(--border);border-radius:14px;padding:16px;margin-bottom:16px;}
+  label{display:block;font-size:12.5px;font-weight:600;margin-bottom:6px;color:var(--muted);}
+  input[type=text], input[type=number], input[type=url]{
+    width:100%;background:var(--black-3);border:1px solid var(--border);border-radius:8px;
+    padding:10px 12px;color:var(--white);font-size:14px;margin-bottom:12px;font-family:inherit;
+  }
+  button{
+    background:var(--orange);color:var(--black);border:none;border-radius:8px;
+    padding:12px 16px;font-weight:700;font-size:13.5px;cursor:pointer;width:100%;
+  }
+  button.secondary{background:var(--black-3);color:var(--white);border:1px solid var(--border);font-weight:600;}
+  button:disabled{opacity:.45;cursor:default;}
+  .row{display:flex;gap:10px;}
+  .row > *{flex:1;}
+  .drop-zone{
+    border:2px dashed var(--border);border-radius:10px;padding:24px 14px;text-align:center;
+    color:var(--muted);font-size:13px;margin-bottom:12px;cursor:pointer;transition:border-color .2s;
+  }
+  .drop-zone.drag{border-color:var(--orange);color:var(--orange);}
+  #fileInput{display:none;}
+  .url-row{display:flex;gap:8px;}
+  .url-row input{margin-bottom:0;}
+  .url-row button{width:auto;padding:10px 16px;flex-shrink:0;}
+
+  .img-item{display:flex;gap:12px;padding:12px 0;border-bottom:1px solid var(--border);}
+  .img-item:last-child{border-bottom:none;}
+  :root{ --preview-ratio: 16/10; }
+  .thumb{
+    width:130px;aspect-ratio:var(--preview-ratio);border-radius:8px;background:var(--black-3);
+    flex-shrink:0;position:relative;overflow:hidden;cursor:grab;touch-action:none;
+  }
+  .thumb:active{cursor:grabbing;}
+  .thumb img{width:100%;height:100%;object-fit:cover;display:block;user-select:none;-webkit-user-drag:none;pointer-events:none;}
+  .drag-hint{font-size:10px;color:var(--muted);text-align:center;margin-top:4px;}
+  .img-info{flex:1;min-width:0;}
+  .img-name{font-size:13px;font-weight:600;word-break:break-all;}
+  .img-size{font-size:11.5px;color:var(--muted);margin-top:2px;}
+  .img-size .new{color:var(--orange);font-weight:700;}
+  .img-folder-input{
+    margin-top:6px;width:100%;background:var(--black-3);border:1px solid var(--border);border-radius:6px;
+    padding:6px 8px;color:var(--white);font-size:12px;
+  }
+  .img-actions{display:flex;flex-direction:column;gap:6px;flex-shrink:0;}
+  .icon-btn{
+    background:var(--black-3);border:1px solid var(--border);color:var(--muted);border-radius:6px;
+    width:32px;height:32px;font-size:14px;cursor:pointer;display:flex;align-items:center;justify-content:center;padding:0;
+  }
+  .icon-btn.download{color:var(--orange);display:none;}
+  .icon-btn.download.show{display:flex;}
+
+  .toast{
+    position:fixed;bottom:20px;left:50%;transform:translate(-50%,10px);background:var(--black-3);
+    border:1px solid var(--orange);color:var(--white);padding:10px 18px;border-radius:999px;
+    font-size:13px;opacity:0;transition:opacity .3s, transform .3s;pointer-events:none;max-width:90vw;text-align:center;
+  }
+  .toast.show{opacity:1;transform:translate(-50%,0);}
+  .empty-msg{color:var(--muted);font-size:13px;text-align:center;padding:14px 0;}
+  .note{font-size:11.5px;color:var(--muted);margin-top:18px;line-height:1.6;}
+</style>
+</head>
+<body>
+  <h1>🖼️ Optimizador de Imágenes</h1>
+  <p class="subtitle">Herramienta interna de NIKASHOP — achica y comprime fotos antes de subirlas al panel.</p>
+
+  <div class="card">
+    <label>Subir desde el celular</label>
+    <div class="drop-zone" id="dropZone">
+      📁 Tocá para elegir imágenes<br>(podés elegir varias a la vez)
+    </div>
+    <input type="file" id="fileInput" accept="image/*" multiple>
+
+    <label style="margin-top:6px;">O pegar un link de imagen</label>
+    <div class="url-row">
+      <input type="url" id="urlInput" placeholder="https://...">
+      <button id="addUrlBtn">Agregar</button>
+    </div>
+  </div>
+
+  <div class="card">
+    <label>Vista previa como</label>
+    <select id="previewRatio">
+      <option value="16/10">Categoría / Subcategoría (recuadro panorámico)</option>
+      <option value="16/9">Producto (recuadro de producto)</option>
+    </select>
+    <p style="font-size:11.5px;color:var(--muted);margin:0;">Así se va a recortar tu foto en el sitio real. Si no queda bien encuadrada, arrastrala dentro del recuadro de cada imagen para elegir qué parte se conserva — el archivo final ya sale recortado tal como lo dejes.</p>
+  </div>
+
+  <div class="card">
+    <div class="row">
+      <div>
+        <label>Ancho máximo (px)</label>
+        <input type="number" id="maxWidth" value="1000">
+      </div>
+      <div>
+        <label>Calidad (1-100)</label>
+        <input type="number" id="quality" value="80" min="1" max="100">
+      </div>
+    </div>
+    <button id="processBtn" disabled>Procesar todas</button>
+  </div>
+
+  <div class="card">
+    <div id="imgList"><p class="empty-msg">Todavía no agregaste ninguna imagen.</p></div>
+  </div>
+
+  <button id="downloadZipBtn" disabled>📦 Descargar todo (ZIP, agrupado por carpeta)</button>
+
+  <p class="note">
+    Tip: en "Carpeta" podés escribir un nombre para agrupar (ej: "mobile-legends" o "streaming/netflix") — las imágenes con el mismo nombre quedan juntas dentro del ZIP. Dejalo vacío si no necesitás agrupar.<br><br>
+    Si un link de otra página no carga, es porque ese sitio no permite que se lea su imagen desde acá (por seguridad/derechos de autor) — descargala a tu celular primero y subila como archivo en su lugar.
+  </p>
+
+  <div id="toast" class="toast"></div>
+
+<script>
+  let images = []; // {id, name, folder, originalBlob, originalSize, processedBlob, processedSize, url}
+
+  document.getElementById('previewRatio').addEventListener('change', (e) => {
+    document.documentElement.style.setProperty('--preview-ratio', e.target.value);
+  });
+
+  function showToast(msg){
+    const t = document.getElementById('toast');
+    t.textContent = msg;
+    t.classList.add('show');
+    clearTimeout(t._timer);
+    t._timer = setTimeout(() => t.classList.remove('show'), 2600);
+  }
+
+  function escapeHTML(str){
+    return String(str).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  }
+
+  function fmtSize(bytes){
+    if(bytes < 1024) return bytes + ' B';
+    if(bytes < 1024*1024) return (bytes/1024).toFixed(0) + ' KB';
+    return (bytes/(1024*1024)).toFixed(2) + ' MB';
+  }
+
+  function addImage(blob, name){
+    const id = 'img' + Date.now() + Math.random().toString(36).slice(2,7);
+    images.push({
+      id, name, folder: '',
+      originalBlob: blob, originalSize: blob.size,
+      processedBlob: null, processedSize: null,
+      url: URL.createObjectURL(blob),
+      posX: 50, posY: 50
+    });
+    renderList();
+    document.getElementById('processBtn').disabled = false;
+  }
+
+  // ---------- Carga desde archivos ----------
+  const dropZone = document.getElementById('dropZone');
+  const fileInput = document.getElementById('fileInput');
+  dropZone.addEventListener('click', () => fileInput.click());
+  fileInput.addEventListener('change', (e) => {
+    Array.from(e.target.files).forEach(file => addImage(file, file.name));
+    fileInput.value = '';
+  });
+  ['dragover','dragleave','drop'].forEach(evt => {
+    dropZone.addEventListener(evt, (e) => {
+      e.preventDefault();
+      dropZone.classList.toggle('drag', evt === 'dragover');
+      if(evt === 'drop'){
+        Array.from(e.dataTransfer.files).forEach(file => {
+          if(file.type.startsWith('image/')) addImage(file, file.name);
+        });
+      }
+    });
+  });
+
+  // ---------- Carga desde URL ----------
+  document.getElementById('addUrlBtn').addEventListener('click', async () => {
+    const url = document.getElementById('urlInput').value.trim();
+    if(!url){ showToast('Pegá un link primero'); return; }
+    showToast('Descargando imagen...');
+    try {
+      const res = await fetch(url, { mode: 'cors' });
+      if(!res.ok) throw new Error('http-error');
+      const blob = await res.blob();
+      if(!blob.type.startsWith('image/')) throw new Error('not-image');
+      const name = url.split('/').pop().split('?')[0] || 'imagen-url.jpg';
+      addImage(blob, name);
+      document.getElementById('urlInput').value = '';
+      showToast('Imagen agregada');
+    } catch(err) {
+      showToast('No se pudo cargar esa URL — descargala a tu celular y subila como archivo');
+    }
+  });
+
+  // ---------- Render de la lista ----------
+  function clamp(v, min, max){ return Math.max(min, Math.min(max, v)); }
+
+  function attachDrag(thumbEl){
+    const id = thumbEl.dataset.id;
+    const imgEl = thumbEl.querySelector('img');
+    let dragging = false, startX = 0, startY = 0, startPosX = 50, startPosY = 50;
+
+    function onDown(e){
+      const img = images.find(i => i.id === id);
+      if(!img) return;
+      dragging = true;
+      const p = e.touches ? e.touches[0] : e;
+      startX = p.clientX; startY = p.clientY;
+      startPosX = img.posX; startPosY = img.posY;
+    }
+    function onMove(e){
+      if(!dragging) return;
+      const img = images.find(i => i.id === id);
+      if(!img) return;
+      const p = e.touches ? e.touches[0] : e;
+      const rect = thumbEl.getBoundingClientRect();
+      const dx = p.clientX - startX, dy = p.clientY - startY;
+      img.posX = clamp(startPosX - (dx / rect.width) * 100, 0, 100);
+      img.posY = clamp(startPosY - (dy / rect.height) * 100, 0, 100);
+      imgEl.style.objectPosition = `${img.posX}% ${img.posY}%`;
+      e.preventDefault();
+    }
+    function onUp(){ dragging = false; }
+
+    thumbEl.addEventListener('mousedown', onDown);
+    thumbEl.addEventListener('touchstart', onDown, { passive: false });
+    window.addEventListener('mousemove', onMove);
+    window.addEventListener('touchmove', onMove, { passive: false });
+    window.addEventListener('mouseup', onUp);
+    window.addEventListener('touchend', onUp);
+  }
+
+  function renderList(){
+    const list = document.getElementById('imgList');
+    if(!images.length){
+      list.innerHTML = '<p class="empty-msg">Todavía no agregaste ninguna imagen.</p>';
+      return;
+    }
+    list.innerHTML = images.map(img => `
+      <div class="img-item" data-id="${img.id}">
+        <div>
+          <div class="thumb" data-id="${img.id}">
+            <img src="${img.url}" alt="" style="object-position:${img.posX}% ${img.posY}%">
+          </div>
+          <div class="drag-hint">↔️ Arrastrá</div>
+        </div>
+        <div class="img-info">
+          <div class="img-name">${escapeHTML(img.name)}</div>
+          <div class="img-size">
+            ${fmtSize(img.originalSize)}${img.processedSize ? ` → <span class="new">${fmtSize(img.processedSize)}</span>` : ''}
+          </div>
+          <input type="text" class="img-folder-input" placeholder="Carpeta (opcional)" value="${escapeHTML(img.folder)}" data-id="${img.id}">
+        </div>
+        <div class="img-actions">
+          <button class="icon-btn remove" data-id="${img.id}" title="Quitar">✕</button>
+          <button class="icon-btn download" data-id="${img.id}" title="Descargar">⬇</button>
+        </div>
+      </div>
+    `).join('');
+
+    list.querySelectorAll('.thumb').forEach(thumbEl => attachDrag(thumbEl));
+
+    list.querySelectorAll('.img-folder-input').forEach(inp => {
+      inp.addEventListener('input', (e) => {
+        const img = images.find(i => i.id === e.target.dataset.id);
+        if(img) img.folder = e.target.value.trim();
+      });
+    });
+    list.querySelectorAll('.remove').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        images = images.filter(i => i.id !== e.target.dataset.id);
+        renderList();
+        document.getElementById('processBtn').disabled = !images.length;
+        document.getElementById('downloadZipBtn').disabled = !images.some(i => i.processedBlob);
+      });
+    });
+    list.querySelectorAll('.download').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        const img = images.find(i => i.id === e.target.dataset.id);
+        if(img && img.processedBlob) downloadBlob(img.processedBlob, jpgName(img.name));
+      });
+    });
+  }
+
+  function jpgName(name){
+    return name.replace(/\.[^.]+$/, '') + '.jpg';
+  }
+
+  function downloadBlob(blob, name){
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = name;
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+  }
+
+  // ---------- Procesar (recorte según posición + resize + compresión vía canvas) ----------
+  function processImage(blob, maxWidth, quality, ratioStr, posX, posY){
+    return new Promise((resolve, reject) => {
+      const img = new Image();
+      img.onload = () => {
+        const [ratioW, ratioH] = ratioStr.split('/').map(Number);
+        const iw = img.width, ih = img.height;
+
+        let cropW, cropH;
+        if(iw / ih > ratioW / ratioH){
+          cropH = ih;
+          cropW = ih * (ratioW / ratioH);
+        } else {
+          cropW = iw;
+          cropH = iw * (ratioH / ratioW);
+        }
+        const maxOffX = iw - cropW, maxOffY = ih - cropH;
+        const cropX = (posX / 100) * maxOffX;
+        const cropY = (posY / 100) * maxOffY;
+
+        let outW = Math.min(maxWidth, Math.round(cropW));
+        let outH = Math.round(outW * (ratioH / ratioW));
+
+        const canvas = document.createElement('canvas');
+        canvas.width = outW; canvas.height = outH;
+        const ctx = canvas.getContext('2d');
+        ctx.fillStyle = '#FFFFFF';
+        ctx.fillRect(0, 0, outW, outH);
+        ctx.drawImage(img, cropX, cropY, cropW, cropH, 0, 0, outW, outH);
+        canvas.toBlob(
+          (outBlob) => outBlob ? resolve(outBlob) : reject(new Error('toBlob falló')),
+          'image/jpeg',
+          quality / 100
+        );
+      };
+      img.onerror = () => reject(new Error('No se pudo leer la imagen (puede estar protegida)'));
+      img.src = URL.createObjectURL(blob);
+    });
+  }
+
+  document.getElementById('processBtn').addEventListener('click', async () => {
+    const maxWidth = parseInt(document.getElementById('maxWidth').value, 10) || 1000;
+    const quality = parseInt(document.getElementById('quality').value, 10) || 80;
+    const ratioStr = document.getElementById('previewRatio').value;
+    const btn = document.getElementById('processBtn');
+    btn.disabled = true;
+    btn.textContent = 'Procesando...';
+
+    for(const img of images){
+      try {
+        const result = await processImage(img.originalBlob, maxWidth, quality, ratioStr, img.posX, img.posY);
+        img.processedBlob = result;
+        img.processedSize = result.size;
+      } catch(err) {
+        showToast(`No se pudo procesar "${img.name}"`);
+      }
+    }
+
+    renderList();
+    btn.textContent = 'Procesar todas';
+    btn.disabled = false;
+    document.getElementById('downloadZipBtn').disabled = !images.some(i => i.processedBlob);
+    showToast('¡Listo! Ya podés descargar.');
+  });
+
+  // ---------- Descargar todo en ZIP, agrupado por carpeta ----------
+  document.getElementById('downloadZipBtn').addEventListener('click', async () => {
+    const ready = images.filter(i => i.processedBlob);
+    if(!ready.length){ showToast('Procesá las imágenes primero'); return; }
+    const zip = new JSZip();
+    ready.forEach(img => {
+      const path = img.folder ? `${img.folder}/${jpgName(img.name)}` : jpgName(img.name);
+      zip.file(path, img.processedBlob);
+    });
+    showToast('Generando ZIP...');
+    const content = await zip.generateAsync({ type: 'blob' });
+    downloadBlob(content, 'nikashop-imagenes.zip');
+    showToast('¡ZIP descargado!');
+  });
+</script>
+</body>
+</html>

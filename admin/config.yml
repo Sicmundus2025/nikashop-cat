@@ -1,13 +1,13 @@
 backend:
   name: github
   repo: Sicmundus2025/nikashop-cat
-  branch: staging
+  branch: main
 
 # Las imágenes que subas desde el panel se guardan acá, dentro del repo
 media_folder: "images"
 public_folder: "/images"
 
-publish_mode: simple
+publish_mode: editorial_workflow
 slug:
   encoding: "ascii"
   clean_accents: true
@@ -51,11 +51,17 @@ collections:
                   - "Herramientas"
                   - "Roblox"
                   - "Gift Cards"
+                  - "Steam"
+                  - "Fortnite"
+                  - "PUBG"
+                  - "Delta Force"
+                  - "Blood Strike"
+                  - "Magic Chess: Go Go"
+                  - "Honkai: Star Rail"
+                  - "Redes Sociales"
                   - "Arena Breakout"
                   - "Wuthering Waves"
                   - "Marvel Rivals"
-                  - "Blood Strike"
-                  - "Delta Force"
               - { label: "Subcategoría (debe coincidir exacto)", name: "subcategoria", widget: "string" }
               - { label: "Imagen", name: "imagen", widget: "image", required: false }
 
@@ -87,11 +93,17 @@ collections:
                   - "Herramientas"
                   - "Roblox"
                   - "Gift Cards"
+                  - "Steam"
+                  - "Fortnite"
+                  - "PUBG"
+                  - "Delta Force"
+                  - "Blood Strike"
+                  - "Magic Chess: Go Go"
+                  - "Honkai: Star Rail"
+                  - "Redes Sociales"
                   - "Arena Breakout"
                   - "Wuthering Waves"
                   - "Marvel Rivals"
-                  - "Blood Strike"
-                  - "Delta Force"
               - { label: "Imagen", name: "imagen", widget: "image", required: false, hint: "Foto representativa de la categoría" }
 
   # ===== PlayStation (4 archivos según subcategoría) =====

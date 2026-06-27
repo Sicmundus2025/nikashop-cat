@@ -3,7 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>NIKASHOP — Ajuste de Precios</title>
+<title>NIKASHOP — Optimizador de Imágenes</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
 <style>
   :root{
     --black:#0E0E0E; --black-2:#151515; --black-3:#1B1B1B;
@@ -15,7 +16,7 @@
   .subtitle{color:var(--muted);font-size:12.5px;margin-bottom:20px;}
   .card{background:var(--black-2);border:1px solid var(--border);border-radius:14px;padding:16px;margin-bottom:16px;}
   label{display:block;font-size:12.5px;font-weight:600;margin-bottom:6px;color:var(--muted);}
-  select, input[type=number], input[type=text]{
+  input[type=text], input[type=number], input[type=url]{
     width:100%;background:var(--black-3);border:1px solid var(--border);border-radius:8px;
     padding:10px 12px;color:var(--white);font-size:14px;margin-bottom:12px;font-family:inherit;
   }
@@ -24,133 +25,108 @@
     padding:12px 16px;font-weight:700;font-size:13.5px;cursor:pointer;width:100%;
   }
   button.secondary{background:var(--black-3);color:var(--white);border:1px solid var(--border);font-weight:600;}
+  button:disabled{opacity:.45;cursor:default;}
   .row{display:flex;gap:10px;}
   .row > *{flex:1;}
-  .product-row{display:flex;align-items:center;gap:10px;padding:9px 0;border-bottom:1px solid var(--border);font-size:13px;}
-  .product-row:last-child{border-bottom:none;}
-  .product-row input[type=checkbox]{width:18px;height:18px;flex-shrink:0;accent-color:var(--orange);}
-  .product-info{flex:1;min-width:0;}
-  .product-name{font-weight:600;}
-  .product-sub{color:var(--muted);font-size:11px;}
-  .price-display{font-size:12px;text-align:right;flex-shrink:0;}
-  .price-old{color:var(--muted);}
-  .price-new{color:var(--orange);font-weight:700;}
-  .arrow{color:var(--muted);margin:0 3px;}
-  #productList{max-height:400px;overflow-y:auto;}
-  .select-actions{display:flex;gap:8px;margin-bottom:10px;}
-  .select-actions button{font-size:12px;padding:8px;}
-  #jsonOutput{
-    width:100%;min-height:150px;background:var(--black-3);border:1px solid var(--border);
-    border-radius:8px;color:var(--white);font-family:monospace;font-size:11px;padding:10px;margin-bottom:12px;
+  .drop-zone{
+    border:2px dashed var(--border);border-radius:10px;padding:24px 14px;text-align:center;
+    color:var(--muted);font-size:13px;margin-bottom:12px;cursor:pointer;transition:border-color .2s;
   }
+  .drop-zone.drag{border-color:var(--orange);color:var(--orange);}
+  #fileInput{display:none;}
+  .url-row{display:flex;gap:8px;}
+  .url-row input{margin-bottom:0;}
+  .url-row button{width:auto;padding:10px 16px;flex-shrink:0;}
+
+  .img-item{display:flex;gap:12px;padding:12px 0;border-bottom:1px solid var(--border);}
+  .img-item:last-child{border-bottom:none;}
+  :root{ --preview-ratio: 16/10; }
+  .thumb{width:130px;aspect-ratio:var(--preview-ratio);border-radius:8px;object-fit:cover;background:var(--black-3);flex-shrink:0;}
+  .img-info{flex:1;min-width:0;}
+  .img-name{font-size:13px;font-weight:600;word-break:break-all;}
+  .img-size{font-size:11.5px;color:var(--muted);margin-top:2px;}
+  .img-size .new{color:var(--orange);font-weight:700;}
+  .img-folder-input{
+    margin-top:6px;width:100%;background:var(--black-3);border:1px solid var(--border);border-radius:6px;
+    padding:6px 8px;color:var(--white);font-size:12px;
+  }
+  .img-actions{display:flex;flex-direction:column;gap:6px;flex-shrink:0;}
+  .icon-btn{
+    background:var(--black-3);border:1px solid var(--border);color:var(--muted);border-radius:6px;
+    width:32px;height:32px;font-size:14px;cursor:pointer;display:flex;align-items:center;justify-content:center;padding:0;
+  }
+  .icon-btn.download{color:var(--orange);display:none;}
+  .icon-btn.download.show{display:flex;}
+
   .toast{
     position:fixed;bottom:20px;left:50%;transform:translate(-50%,10px);background:var(--black-3);
     border:1px solid var(--orange);color:var(--white);padding:10px 18px;border-radius:999px;
-    font-size:13px;opacity:0;transition:opacity .3s, transform .3s;pointer-events:none;
+    font-size:13px;opacity:0;transition:opacity .3s, transform .3s;pointer-events:none;max-width:90vw;text-align:center;
   }
   .toast.show{opacity:1;transform:translate(-50%,0);}
-  .instructions{font-size:12.5px;color:var(--muted);line-height:1.6;margin:0;}
-  .instructions ol{padding-left:18px;margin:6px 0 0;}
-  .checkbox-label{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--white);margin-bottom:12px;}
-  .checkbox-label input{width:auto;margin:0;accent-color:var(--orange);}
-  .note{font-size:11.5px;color:var(--muted);margin-top:18px;}
+  .empty-msg{color:var(--muted);font-size:13px;text-align:center;padding:14px 0;}
+  .note{font-size:11.5px;color:var(--muted);margin-top:18px;line-height:1.6;}
 </style>
 </head>
 <body>
-  <h1>🛠️ Ajuste de Precios por Porcentaje</h1>
-  <p class="subtitle">Herramienta interna de NIKASHOP — no aparece en el menú ni la ven tus clientes.</p>
+  <h1>🖼️ Optimizador de Imágenes</h1>
+  <p class="subtitle">Herramienta interna de NIKASHOP — achica y comprime fotos antes de subirlas al panel.</p>
 
   <div class="card">
-    <label>Archivo de categoría</label>
-    <select id="fileSelect">
-      <option value="">Elegí una categoría...</option>
-      <option value="data/playstation-ps4.json">PlayStation → Juegos PS4</option>
-      <option value="data/playstation-ps5.json">PlayStation → Juegos PS5</option>
-      <option value="data/playstation-ofertas.json">PlayStation → Ofertas Especiales</option>
-      <option value="data/playstation-plus.json">PlayStation → PS Plus</option>
-      <option value="data/honor-of-kings.json">Honor of Kings</option>
-      <option value="data/genshin-impact.json">Genshin Impact</option>
-      <option value="data/free-fire.json">Free Fire</option>
-      <option value="data/mobile-legends.json">Mobile Legends</option>
-      <option value="data/brawl-stars.json">Brawl Stars</option>
-      <option value="data/streaming.json">Streaming</option>
-      <option value="data/musica-y-video.json">Música y Video</option>
-      <option value="data/herramientas.json">Herramientas</option>
-      <option value="data/roblox.json">Roblox</option>
-      <option value="data/gift-cards-steam.json">Gift Cards → Steam</option>
-      <option value="data/steam-keys.json">Steam → Keys</option>
-      <option value="data/steam-cuentas.json">Steam → Juegos (Cuentas)</option>
-      <option value="data/fortnite.json">Fortnite</option>
-      <option value="data/pubg.json">PUBG</option>
-      <option value="data/delta-force.json">Delta Force</option>
-      <option value="data/blood-strike.json">Blood Strike</option>
-      <option value="data/magic-chess-go-go.json">Magic Chess: Go Go</option>
-      <option value="data/honkai-star-rail.json">Honkai: Star Rail</option>
-      <option value="data/redes-sociales.json">Redes Sociales</option>
-      <option value="otro">Otro archivo (escribir ruta)...</option>
-    </select>
-    <input type="text" id="customPath" placeholder="ej: data/mi-categoria.json" style="display:none;">
-    <button id="loadBtn">Cargar productos</button>
+    <label>Subir desde el celular</label>
+    <div class="drop-zone" id="dropZone">
+      📁 Tocá para elegir imágenes<br>(podés elegir varias a la vez)
+    </div>
+    <input type="file" id="fileInput" accept="image/*" multiple>
+
+    <label style="margin-top:6px;">O pegar un link de imagen</label>
+    <div class="url-row">
+      <input type="url" id="urlInput" placeholder="https://...">
+      <button id="addUrlBtn">Agregar</button>
+    </div>
   </div>
 
-  <div class="card" id="configCard" style="display:none;">
+  <div class="card">
+    <label>Vista previa como</label>
+    <select id="previewRatio">
+      <option value="16/10">Categoría / Subcategoría (recuadro panorámico)</option>
+      <option value="16/9">Producto (recuadro de producto)</option>
+    </select>
+    <p style="font-size:11.5px;color:var(--muted);margin:0;">Así se va a recortar tu foto en el sitio real — si ves que se corta mal, conviene elegir otra foto o una más panorámica.</p>
+  </div>
+
+  <div class="card">
     <div class="row">
       <div>
-        <label>Porcentaje (+ sube, − baja)</label>
-        <input type="number" id="percentInput" placeholder="ej: 11 ó -5" step="0.1">
+        <label>Ancho máximo (px)</label>
+        <input type="number" id="maxWidth" value="1000">
       </div>
       <div>
-        <label>Redondear a</label>
-        <select id="roundSelect">
-          <option value="0">Sin redondeo</option>
-          <option value="50" selected>Cada $50</option>
-          <option value="100">Cada $100</option>
-          <option value="500">Cada $500</option>
-          <option value="1000">Cada $1000</option>
-        </select>
+        <label>Calidad (1-100)</label>
+        <input type="number" id="quality" value="80" min="1" max="100">
       </div>
     </div>
-    <label class="checkbox-label">
-      <input type="checkbox" id="applyToOffer" checked> Aplicar el mismo % al Precio Oferta (si tiene)
-    </label>
-    <button id="calcBtn">Calcular precios nuevos</button>
+    <button id="processBtn" disabled>Procesar todas</button>
   </div>
 
-  <div class="card" id="listCard" style="display:none;">
-    <div class="select-actions">
-      <button class="secondary" id="selectAllBtn">Seleccionar todos</button>
-      <button class="secondary" id="selectNoneBtn">Ninguno</button>
-    </div>
-    <div id="productList"></div>
+  <div class="card">
+    <div id="imgList"><p class="empty-msg">Todavía no agregaste ninguna imagen.</p></div>
   </div>
 
-  <div class="card" id="outputCard" style="display:none;">
-    <label>JSON actualizado</label>
-    <textarea id="jsonOutput" readonly></textarea>
-    <button id="copyBtn">📋 Copiar JSON</button>
-    <p class="instructions">
-      <strong>Cómo aplicarlo:</strong>
-      <ol>
-        <li>Tocá "Copiar JSON" arriba</li>
-        <li>Entrá a GitHub, al mismo archivo que elegiste (carpeta <code>data/</code>)</li>
-        <li>Tocá el lápiz ✏️ para editar</li>
-        <li>Borrá todo el contenido viejo y pegá el nuevo</li>
-        <li>Commit changes</li>
-      </ol>
-    </p>
-  </div>
+  <button id="downloadZipBtn" disabled>📦 Descargar todo (ZIP, agrupado por carpeta)</button>
 
-  <p class="note">Nota: esta página lee los mismos datos públicos de tu catálogo (los precios ya son visibles en tu sitio). No tiene forma de guardar cambios sola — siempre tenés que confirmar pegando el resultado en GitHub vos mismo, así no hay riesgo de que algo se suba sin que lo revises.</p>
+  <p class="note">
+    Tip: en "Carpeta" podés escribir un nombre para agrupar (ej: "mobile-legends" o "streaming/netflix") — las imágenes con el mismo nombre quedan juntas dentro del ZIP. Dejalo vacío si no necesitás agrupar.<br><br>
+    Si un link de otra página no carga, es porque ese sitio no permite que se lea su imagen desde acá (por seguridad/derechos de autor) — descargala a tu celular primero y subila como archivo en su lugar.
+  </p>
 
   <div id="toast" class="toast"></div>
 
 <script>
-  let currentItems = [];
+  let images = []; // {id, name, folder, originalBlob, originalSize, processedBlob, processedSize, url}
 
-  const fileSelect = document.getElementById('fileSelect');
-  const customPath = document.getElementById('customPath');
-  fileSelect.addEventListener('change', () => {
-    customPath.style.display = fileSelect.value === 'otro' ? 'block' : 'none';
+  document.getElementById('previewRatio').addEventListener('change', (e) => {
+    document.documentElement.style.setProperty('--preview-ratio', e.target.value);
   });
 
   function showToast(msg){
@@ -158,123 +134,193 @@
     t.textContent = msg;
     t.classList.add('show');
     clearTimeout(t._timer);
-    t._timer = setTimeout(() => t.classList.remove('show'), 2200);
+    t._timer = setTimeout(() => t.classList.remove('show'), 2600);
   }
 
   function escapeHTML(str){
     return String(str).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   }
 
-  function money(n){
-    const num = parseFloat(n);
-    return isNaN(num) ? '' : '$' + num.toLocaleString('es-AR');
+  function fmtSize(bytes){
+    if(bytes < 1024) return bytes + ' B';
+    if(bytes < 1024*1024) return (bytes/1024).toFixed(0) + ' KB';
+    return (bytes/(1024*1024)).toFixed(2) + ' MB';
   }
 
-  document.getElementById('loadBtn').addEventListener('click', async () => {
-    const path = fileSelect.value === 'otro' ? customPath.value.trim() : fileSelect.value;
-    if(!path){ showToast('Elegí un archivo primero'); return; }
-    try {
-      const res = await fetch(path, { cache: 'no-cache' });
-      if(!res.ok) throw new Error('No se pudo cargar');
-      const data = await res.json();
-      currentItems = Array.isArray(data) ? data : (data.items || []);
-      if(!currentItems.length){ showToast('Ese archivo está vacío'); return; }
-      renderProductList();
-      document.getElementById('configCard').style.display = 'block';
-      document.getElementById('listCard').style.display = 'block';
-      document.getElementById('outputCard').style.display = 'none';
-      showToast(`Cargados ${currentItems.length} productos`);
-    } catch(err) {
-      showToast('Error al cargar — revisá la ruta del archivo');
-    }
-  });
-
-  function renderProductList(){
-    const list = document.getElementById('productList');
-    list.innerHTML = currentItems.map((it, i) => `
-      <div class="product-row">
-        <input type="checkbox" class="item-check" data-i="${i}" checked>
-        <div class="product-info">
-          <div class="product-name">${escapeHTML(it.producto || '(sin nombre)')}</div>
-          ${it.subcategoria ? `<div class="product-sub">${escapeHTML(it.subcategoria)}</div>` : ''}
-        </div>
-        <div class="price-display" data-i="${i}">${money(it.precio)}</div>
-      </div>
-    `).join('');
+  function addImage(blob, name){
+    const id = 'img' + Date.now() + Math.random().toString(36).slice(2,7);
+    images.push({
+      id, name, folder: '',
+      originalBlob: blob, originalSize: blob.size,
+      processedBlob: null, processedSize: null,
+      url: URL.createObjectURL(blob)
+    });
+    renderList();
+    document.getElementById('processBtn').disabled = false;
   }
 
-  document.getElementById('selectAllBtn').addEventListener('click', () => {
-    document.querySelectorAll('.item-check').forEach(cb => cb.checked = true);
+  // ---------- Carga desde archivos ----------
+  const dropZone = document.getElementById('dropZone');
+  const fileInput = document.getElementById('fileInput');
+  dropZone.addEventListener('click', () => fileInput.click());
+  fileInput.addEventListener('change', (e) => {
+    Array.from(e.target.files).forEach(file => addImage(file, file.name));
+    fileInput.value = '';
   });
-  document.getElementById('selectNoneBtn').addEventListener('click', () => {
-    document.querySelectorAll('.item-check').forEach(cb => cb.checked = false);
-  });
-
-  function roundTo(value, unit){
-    if(!unit) return Math.round(value);
-    return Math.round(value / unit) * unit;
-  }
-
-  document.getElementById('calcBtn').addEventListener('click', () => {
-    const pct = parseFloat(document.getElementById('percentInput').value);
-    if(isNaN(pct)){ showToast('Ingresá un porcentaje válido'); return; }
-    const roundUnit = parseInt(document.getElementById('roundSelect').value, 10);
-    const applyOffer = document.getElementById('applyToOffer').checked;
-    const factor = 1 + (pct / 100);
-
-    document.querySelectorAll('.item-check').forEach(cb => {
-      const i = parseInt(cb.dataset.i, 10);
-      const item = currentItems[i];
-      const priceDisplay = document.querySelector(`.price-display[data-i="${i}"]`);
-      if(cb.checked){
-        const oldPrice = parseFloat(item.precio) || 0;
-        const newPrice = roundTo(oldPrice * factor, roundUnit);
-        item._newPrecio = newPrice;
-        let oferLine = '';
-        if(applyOffer && item.precio_oferta){
-          const oldOfer = parseFloat(item.precio_oferta) || 0;
-          const newOfer = roundTo(oldOfer * factor, roundUnit);
-          item._newOferta = newOfer;
-          oferLine = `<br><span style="color:var(--muted);font-size:10.5px;">oferta ${money(oldOfer)}→${money(newOfer)}</span>`;
-        } else {
-          delete item._newOferta;
-        }
-        priceDisplay.innerHTML = `<span class="price-old">${money(oldPrice)}</span><span class="arrow">→</span><span class="price-new">${money(newPrice)}</span>${oferLine}`;
-      } else {
-        delete item._newPrecio;
-        delete item._newOferta;
-        priceDisplay.innerHTML = money(item.precio);
+  ['dragover','dragleave','drop'].forEach(evt => {
+    dropZone.addEventListener(evt, (e) => {
+      e.preventDefault();
+      dropZone.classList.toggle('drag', evt === 'dragover');
+      if(evt === 'drop'){
+        Array.from(e.dataTransfer.files).forEach(file => {
+          if(file.type.startsWith('image/')) addImage(file, file.name);
+        });
       }
     });
-
-    generateOutput();
-    document.getElementById('outputCard').style.display = 'block';
-    document.getElementById('outputCard').scrollIntoView({ behavior: 'smooth' });
   });
 
-  function generateOutput(){
-    const updated = currentItems.map(it => {
-      const clean = Object.assign({}, it);
-      if(clean._newPrecio !== undefined) clean.precio = String(clean._newPrecio);
-      if(clean._newOferta !== undefined) clean.precio_oferta = String(clean._newOferta);
-      delete clean._newPrecio;
-      delete clean._newOferta;
-      return clean;
+  // ---------- Carga desde URL ----------
+  document.getElementById('addUrlBtn').addEventListener('click', async () => {
+    const url = document.getElementById('urlInput').value.trim();
+    if(!url){ showToast('Pegá un link primero'); return; }
+    showToast('Descargando imagen...');
+    try {
+      const res = await fetch(url, { mode: 'cors' });
+      if(!res.ok) throw new Error('http-error');
+      const blob = await res.blob();
+      if(!blob.type.startsWith('image/')) throw new Error('not-image');
+      const name = url.split('/').pop().split('?')[0] || 'imagen-url.jpg';
+      addImage(blob, name);
+      document.getElementById('urlInput').value = '';
+      showToast('Imagen agregada');
+    } catch(err) {
+      showToast('No se pudo cargar esa URL — descargala a tu celular y subila como archivo');
+    }
+  });
+
+  // ---------- Render de la lista ----------
+  function renderList(){
+    const list = document.getElementById('imgList');
+    if(!images.length){
+      list.innerHTML = '<p class="empty-msg">Todavía no agregaste ninguna imagen.</p>';
+      return;
+    }
+    list.innerHTML = images.map(img => `
+      <div class="img-item" data-id="${img.id}">
+        <img class="thumb" src="${img.url}" alt="">
+        <div class="img-info">
+          <div class="img-name">${escapeHTML(img.name)}</div>
+          <div class="img-size">
+            ${fmtSize(img.originalSize)}${img.processedSize ? ` → <span class="new">${fmtSize(img.processedSize)}</span>` : ''}
+          </div>
+          <input type="text" class="img-folder-input" placeholder="Carpeta (opcional)" value="${escapeHTML(img.folder)}" data-id="${img.id}">
+        </div>
+        <div class="img-actions">
+          <button class="icon-btn remove" data-id="${img.id}" title="Quitar">✕</button>
+          <button class="icon-btn download" data-id="${img.id}" title="Descargar">⬇</button>
+        </div>
+      </div>
+    `).join('');
+
+    list.querySelectorAll('.img-folder-input').forEach(inp => {
+      inp.addEventListener('input', (e) => {
+        const img = images.find(i => i.id === e.target.dataset.id);
+        if(img) img.folder = e.target.value.trim();
+      });
     });
-    document.getElementById('jsonOutput').value = JSON.stringify({ items: updated }, null, 2);
+    list.querySelectorAll('.remove').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        images = images.filter(i => i.id !== e.target.dataset.id);
+        renderList();
+        document.getElementById('processBtn').disabled = !images.length;
+        document.getElementById('downloadZipBtn').disabled = !images.some(i => i.processedBlob);
+      });
+    });
+    list.querySelectorAll('.download').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        const img = images.find(i => i.id === e.target.dataset.id);
+        if(img && img.processedBlob) downloadBlob(img.processedBlob, jpgName(img.name));
+      });
+    });
   }
 
-  document.getElementById('copyBtn').addEventListener('click', async () => {
-    const text = document.getElementById('jsonOutput').value;
-    try {
-      await navigator.clipboard.writeText(text);
-      showToast('¡Copiado! Pegalo en GitHub');
-    } catch(err) {
-      const ta = document.getElementById('jsonOutput');
-      ta.select();
-      document.execCommand('copy');
-      showToast('¡Copiado! Pegalo en GitHub');
+  function jpgName(name){
+    return name.replace(/\.[^.]+$/, '') + '.jpg';
+  }
+
+  function downloadBlob(blob, name){
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = name;
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+  }
+
+  // ---------- Procesar (resize + compresión vía canvas) ----------
+  function processImage(blob, maxWidth, quality){
+    return new Promise((resolve, reject) => {
+      const img = new Image();
+      img.onload = () => {
+        let w = img.width, h = img.height;
+        if(w > maxWidth){
+          h = Math.round(h * (maxWidth / w));
+          w = maxWidth;
+        }
+        const canvas = document.createElement('canvas');
+        canvas.width = w; canvas.height = h;
+        const ctx = canvas.getContext('2d');
+        ctx.fillStyle = '#FFFFFF';
+        ctx.fillRect(0, 0, w, h);
+        ctx.drawImage(img, 0, 0, w, h);
+        canvas.toBlob(
+          (outBlob) => outBlob ? resolve(outBlob) : reject(new Error('toBlob falló')),
+          'image/jpeg',
+          quality / 100
+        );
+      };
+      img.onerror = () => reject(new Error('No se pudo leer la imagen (puede estar protegida)'));
+      img.src = URL.createObjectURL(blob);
+    });
+  }
+
+  document.getElementById('processBtn').addEventListener('click', async () => {
+    const maxWidth = parseInt(document.getElementById('maxWidth').value, 10) || 1000;
+    const quality = parseInt(document.getElementById('quality').value, 10) || 80;
+    const btn = document.getElementById('processBtn');
+    btn.disabled = true;
+    btn.textContent = 'Procesando...';
+
+    for(const img of images){
+      try {
+        const result = await processImage(img.originalBlob, maxWidth, quality);
+        img.processedBlob = result;
+        img.processedSize = result.size;
+      } catch(err) {
+        showToast(`No se pudo procesar "${img.name}"`);
+      }
     }
+
+    renderList();
+    btn.textContent = 'Procesar todas';
+    btn.disabled = false;
+    document.getElementById('downloadZipBtn').disabled = !images.some(i => i.processedBlob);
+    showToast('¡Listo! Ya podés descargar.');
+  });
+
+  // ---------- Descargar todo en ZIP, agrupado por carpeta ----------
+  document.getElementById('downloadZipBtn').addEventListener('click', async () => {
+    const ready = images.filter(i => i.processedBlob);
+    if(!ready.length){ showToast('Procesá las imágenes primero'); return; }
+    const zip = new JSZip();
+    ready.forEach(img => {
+      const path = img.folder ? `${img.folder}/${jpgName(img.name)}` : jpgName(img.name);
+      zip.file(path, img.processedBlob);
+    });
+    showToast('Generando ZIP...');
+    const content = await zip.generateAsync({ type: 'blob' });
+    downloadBlob(content, 'nikashop-imagenes.zip');
+    showToast('¡ZIP descargado!');
   });
 </script>
 </body>

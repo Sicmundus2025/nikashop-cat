@@ -1,11 +1,11 @@
 {
   "items": [
-    { "producto": "60 Lunites", "precio": "1500" },
-    { "producto": "300+30 Lunites", "precio": "7500" },
-    { "producto": "980+110 Lunites", "precio": "22350" },
-    { "producto": "1980+260 Lunites", "precio": "44250" },
-    { "producto": "3280+600 Lunites", "precio": "72600" },
-    { "producto": "6480+1600 Lunites", "precio": "141250" },
-    { "producto": "Suscripción Lunar", "precio": "7450" }
+    { "producto": "60 Lunites", "precio": "1500", "precio_oferta": "", "imagen": "", "descripcion": "" },
+    { "producto": "300+30 Lunites", "precio": "7500", "precio_oferta": "", "imagen": "", "descripcion": "" },
+    { "producto": "980+110 Lunites", "precio": "22350", "precio_oferta": "", "imagen": "", "descripcion": "" },
+    { "producto": "1980+260 Lunites", "precio": "44250", "precio_oferta": "", "imagen": "", "descripcion": "" },
+    { "producto": "3280+600 Lunites", "precio": "72600", "precio_oferta": "", "imagen": "", "descripcion": "" },
+    { "producto": "6480+1600 Lunites", "precio": "141250", "precio_oferta": "", "imagen": "", "descripcion": "" },
+    { "producto": "Suscripción Lunar", "precio": "7450", "precio_oferta": "", "imagen": "", "descripcion": "" }
   ]
 }

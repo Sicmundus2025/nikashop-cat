@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NIKASHOP — Panel de Pedidos BuffPin</title>
+<style>
+  :root{
+    --black:#0E0E0E; --black-2:#151515; --black-3:#1B1B1B;
+    --orange:#FF6A00; --yellow:#FFD000; --white:#fff; --muted:#A3A3A3; --border:rgba(255,255,255,0.08);
+    --red:#FF5252; --green:#4ADE80;
+  }
+  *{box-sizing:border-box;}
+  body{background:var(--black);color:var(--white);font-family:system-ui,-apple-system,sans-serif;margin:0;padding:18px;line-height:1.5;}
+  h1{font-size:19px;margin-bottom:4px;}
+  .subtitle{color:var(--muted);font-size:12.5px;margin-bottom:20px;}
+  .card{background:var(--black-2);border:1px solid var(--border);border-radius:14px;padding:16px;margin-bottom:16px;}
+  label{display:block;font-size:12.5px;font-weight:600;margin-bottom:6px;color:var(--muted);}
+  input[type=text], input[type=number], input[type=password], select{
+    width:100%;background:var(--black-3);border:1px solid var(--border);border-radius:8px;
+    padding:10px 12px;color:var(--white);font-size:14px;margin-bottom:12px;font-family:inherit;
+  }
+  button{
+    background:var(--orange);color:var(--black);border:none;border-radius:8px;
+    padding:12px 16px;font-weight:700;font-size:13.5px;cursor:pointer;width:100%;
+  }
+  button.secondary{background:var(--black-3);color:var(--white);border:1px solid var(--border);font-weight:600;}
+  button:disabled{opacity:.45;cursor:default;}
+  .product-row{
+    padding:12px;border-bottom:1px solid var(--border);cursor:pointer;display:flex;justify-content:space-between;gap:10px;
+  }
+  .product-row:hover{background:var(--black-3);}
+  .product-row:last-child{border-bottom:none;}
+  .product-name{font-size:13.5px;font-weight:600;}
+  .product-price{font-size:13px;color:var(--orange);font-weight:700;white-space:nowrap;}
+  #productList{max-height:380px;overflow-y:auto;}
+  .selected-product{
+    background:var(--black-3);border:1px solid var(--orange);border-radius:8px;padding:12px;margin-bottom:14px;
+  }
+  .selected-product .name{font-weight:700;font-size:14px;}
+  .selected-product .price{color:var(--orange);font-size:13px;margin-top:2px;}
+  .field-hint{font-size:11px;color:var(--muted);margin:-8px 0 12px;}
+  .empty-msg{color:var(--muted);font-size:13px;text-align:center;padding:14px 0;}
+  .result-box{padding:14px;border-radius:10px;font-size:13.5px;margin-top:10px;}
+  .result-ok{background:rgba(74,222,128,0.1);border:1px solid var(--green);color:var(--green);}
+  .result-err{background:rgba(255,82,82,0.1);border:1px solid var(--red);color:var(--red);}
+  .toast{
+    position:fixed;bottom:20px;left:50%;transform:translate(-50%,10px);background:var(--black-3);
+    border:1px solid var(--orange);color:var(--white);padding:10px 18px;border-radius:999px;
+    font-size:13px;opacity:0;transition:opacity .3s, transform .3s;pointer-events:none;max-width:90vw;text-align:center;
+  }
+  .toast.show{opacity:1;transform:translate(-50%,0);}
+  .note{font-size:11.5px;color:var(--muted);margin-top:18px;line-height:1.6;}
+  .back-link{display:inline-block;margin-bottom:14px;color:var(--muted);font-size:13px;cursor:pointer;}
+</style>
+</head>
+<body>
+  <h1>🎮 Panel de Pedidos — BuffPin</h1>
+  <p class="subtitle">Herramienta interna NIKASHOP — uso solo de Fabricio. Cada pedido confirmado gasta saldo real.</p>
+
+  <!-- ===== Paso 1: buscar productos ===== -->
+  <div class="card" id="searchCard">
+    <label>Buscar producto</label>
+    <input type="text" id="searchInput" placeholder="Ej: PUBG, UC, Diamantes...">
+    <button id="loadBtn">Cargar catálogo de BuffPin</button>
+    <div id="productList"><p class="empty-msg">Tocá "Cargar catálogo" para ver los productos.</p></div>
+  </div>
+
+  <!-- ===== Paso 2: armar pedido ===== -->
+  <div class="card" id="orderCard" style="display:none;">
+    <span class="back-link" id="backLink">← Elegir otro producto</span>
+    <div class="selected-product" id="selectedProductBox"></div>
+
+    <div id="dynamicFields"></div>
+
+    <label>Cantidad</label>
+    <input type="number" id="buyNumber" value="1" min="1">
+
+    <label>PIN del panel</label>
+    <input type="password" id="pinInput" placeholder="••••" inputmode="numeric">
+
+    <button id="confirmBtn">Confirmar pedido (gasta saldo real)</button>
+    <div id="resultBox"></div>
+  </div>
+
+  <p class="note">
+    Esta página llama a tus propias funciones de Netlify (no expone tu Client Secret). Necesitás tener configuradas
+    en Netlify las variables: <code>BUFFPIN_HOST</code>, <code>BUFFPIN_CLIENT_ID</code>, <code>BUFFPIN_CLIENT_SECRET</code> y <code>PANEL_PIN</code>.
+    Cada pedido confirmado es real e irreversible — revisá bien el producto, el ID/servidor del cliente y la cantidad antes de confirmar.
+  </p>
+
+  <div id="toast" class="toast"></div>
+
+<script>
+  let productos = [];
+  let productoSeleccionado = null;
+
+  function showToast(msg){
+    const t = document.getElementById('toast');
+    t.textContent = msg;
+    t.classList.add('show');
+    clearTimeout(t._timer);
+    t._timer = setTimeout(() => t.classList.remove('show'), 2800);
+  }
+
+  function escapeHTML(str){
+    return String(str).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  }
+
+  document.getElementById('loadBtn').addEventListener('click', async () => {
+    const btn = document.getElementById('loadBtn');
+    btn.disabled = true;
+    btn.textContent = 'Cargando...';
+    try {
+      const res = await fetch('/.netlify/functions/buffpin-productos');
+      const data = await res.json();
+      if (!data.result) throw new Error(data.error || 'Error desconocido');
+      productos = data.productos;
+      renderList(productos);
+      showToast(`Cargados ${productos.length} productos`);
+    } catch (err) {
+      showToast('Error al cargar: ' + err.message);
+    } finally {
+      btn.disabled = false;
+      btn.textContent = 'Cargar catálogo de BuffPin';
+    }
+  });
+
+  document.getElementById('searchInput').addEventListener('input', (e) => {
+    const q = e.target.value.trim().toLowerCase();
+    const filtrados = q ? productos.filter(p => p.nombre.toLowerCase().includes(q)) : productos;
+    renderList(filtrados);
+  });
+
+  function renderList(lista){
+    const wrap = document.getElementById('productList');
+    if (!lista.length) {
+      wrap.innerHTML = '<p class="empty-msg">Sin resultados.</p>';
+      return;
+    }
+    wrap.innerHTML = lista.map((p, i) => `
+      <div class="product-row" data-id="${p.id}">
+        <span class="product-name">${escapeHTML(p.nombre)}</span>
+        <span class="product-price">${p.moneda} ${p.precio}</span>
+      </div>
+    `).join('');
+    wrap.querySelectorAll('.product-row').forEach(row => {
+      row.addEventListener('click', () => seleccionarProducto(Number(row.dataset.id)));
+    });
+  }
+
+  function seleccionarProducto(id){
+    productoSeleccionado = productos.find(p => p.id === id);
+    if (!productoSeleccionado) return;
+
+    document.getElementById('searchCard').style.display = 'none';
+    document.getElementById('orderCard').style.display = 'block';
+    document.getElementById('selectedProductBox').innerHTML = `
+      <div class="name">${escapeHTML(productoSeleccionado.nombre)}</div>
+      <div class="price">${productoSeleccionado.moneda} ${productoSeleccionado.precio}</div>
+    `;
+
+    const fieldsWrap = document.getElementById('dynamicFields');
+    fieldsWrap.innerHTML = (productoSeleccionado.campos || []).map((campo, i) => {
+      if (campo.values && Array.isArray(campo.values)) {
+        const opciones = campo.values.map(v => {
+          const label = v.serverName || v.name || JSON.stringify(v);
+          return `<option value='${escapeHTML(JSON.stringify(v))}'>${escapeHTML(label)}</option>`;
+        }).join('');
+        return `
+          <label>${escapeHTML(campo.name)}</label>
+          <select class="campo-input" data-idx="${i}" data-tipo="select">${opciones}</select>
+          <div class="field-hint">${escapeHTML(campo.tip || '')}</div>
+        `;
+      }
+      return `
+        <label>${escapeHTML(campo.name)}</label>
+        <input type="text" class="campo-input" data-idx="${i}" data-tipo="texto" placeholder="${escapeHTML(campo.tip || '')}">
+        <div class="field-hint">${escapeHTML(campo.tip || '')}</div>
+      `;
+    }).join('');
+
+    document.getElementById('resultBox').innerHTML = '';
+  }
+
+  document.getElementById('backLink').addEventListener('click', () => {
+    document.getElementById('orderCard').style.display = 'none';
+    document.getElementById('searchCard').style.display = 'block';
+    productoSeleccionado = null;
+  });
+
+  document.getElementById('confirmBtn').addEventListener('click', async () => {
+    if (!productoSeleccionado) return;
+    const pin = document.getElementById('pinInput').value.trim();
+    const buyNumber = parseInt(document.getElementById('buyNumber').value, 10) || 1;
+    const resultBox = document.getElementById('resultBox');
+
+    if (!pin) { showToast('Ingresá el PIN'); return; }
+
+    // Armamos los campos con los valores que completó el usuario
+    const camposActualizados = (productoSeleccionado.campos || []).map((campo, i) => {
+      const input = document.querySelector(`.campo-input[data-idx="${i}"]`);
+      const nuevo = Object.assign({}, campo);
+      if (input) {
+        if (input.dataset.tipo === 'select') {
+          try { nuevo.value = JSON.parse(input.value); } catch (e) { nuevo.value = input.value; }
+        } else {
+          nuevo.value = input.value;
+        }
+      }
+      delete nuevo.values; // no se reenvía la lista de opciones, solo el valor elegido
+      return nuevo;
+    });
+
+    const btn = document.getElementById('confirmBtn');
+    btn.disabled = true;
+    btn.textContent = 'Enviando pedido...';
+    resultBox.innerHTML = '';
+
+    try {
+      const res = await fetch('/.netlify/functions/buffpin-pedido', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          pin,
+          priceGroupGoodsId: productoSeleccionado.id,
+          buyNumber,
+          campos: camposActualizados
+        })
+      });
+      const data = await res.json();
+
+      if (data.result && data.data && data.data.code === 1000) {
+        const orden = data.data.order;
+        resultBox.innerHTML = `
+          <div class="result-box result-ok">
+            ✅ Pedido confirmado<br>
+            Orden: ${escapeHTML(orden.orderId)}<br>
+            Total: ${orden.currency} ${orden.payPrice}
+          </div>
+        `;
+        showToast('¡Pedido enviado correctamente!');
+      } else {
+        const msg = (data.error) || (data.data && data.data.message) || 'Error desconocido';
+        resultBox.innerHTML = `<div class="result-box result-err">❌ ${escapeHTML(msg)}</div>`;
+      }
+    } catch (err) {
+      resultBox.innerHTML = `<div class="result-box result-err">❌ Error de conexión: ${escapeHTML(err.message)}</div>`;
+    } finally {
+      btn.disabled = false;
+      btn.textContent = 'Confirmar pedido (gasta saldo real)';
+    }
+  });
+</script>
+</body>
+</html>

@@ -1,10 +1,10 @@
 {
   "items": [
-    { "producto": "100 Lattices", "precio": "1600" },
-    { "producto": "500 Lattices", "precio": "8050" },
-    { "producto": "1000 Lattices", "precio": "15750" },
-    { "producto": "2180 Lattices", "precio": "30950" },
-    { "producto": "5680 Lattices", "precio": "76500" },
-    { "producto": "11680 Lattices", "precio": "151350" }
+    { "producto": "100 Lattices", "precio": "1600", "precio_oferta": "", "imagen": "", "descripcion": "" },
+    { "producto": "500 Lattices", "precio": "8050", "precio_oferta": "", "imagen": "", "descripcion": "" },
+    { "producto": "1000 Lattices", "precio": "15750", "precio_oferta": "", "imagen": "", "descripcion": "" },
+    { "producto": "2180 Lattices", "precio": "30950", "precio_oferta": "", "imagen": "", "descripcion": "" },
+    { "producto": "5680 Lattices", "precio": "76500", "precio_oferta": "", "imagen": "", "descripcion": "" },
+    { "producto": "11680 Lattices", "precio": "151350", "precio_oferta": "", "imagen": "", "descripcion": "" }
   ]
 }

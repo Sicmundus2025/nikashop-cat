@@ -39,6 +39,30 @@
     {
       "categoria": "Blood Strike",
       "imagen": "/images/a5971d3d6fbb664c62fa6a9b6428ad06-1-.jpg"
+    },
+    {
+      "categoria": "Marvel Rivals",
+      "imagen": "/images/cf611940282c33ce2644f1c173e6639c.jpg"
+    },
+    {
+      "categoria": "Arena Breakout",
+      "imagen": "/images/277693b70f17b000ad96afb404353161.jpg"
+    },
+    {
+      "categoria": "Honkai: Star Rail",
+      "imagen": "/images/6b1f40581b61fede6d6b84ac86b26197.jpg"
+    },
+    {
+      "categoria": "Magic Chess: Go Go",
+      "imagen": "/images/magicchessgogo-cover.jpg"
+    },
+    {
+      "categoria": "PUBG",
+      "imagen": "/images/screenshot_20260627-190348_whatsapp.jpg"
+    },
+    {
+      "categoria": "Delta Force",
+      "imagen": "/images/1409e4fc26966fad28e4c208319fc3b6.jpg"
     }
   ]
 }

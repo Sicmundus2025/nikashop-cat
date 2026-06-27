@@ -1,10 +1,46 @@
 {
   "items": [
-    { "producto": "105 Oro", "precio": "1400", "precio_oferta": "", "imagen": "", "descripcion": "" },
-    { "producto": "320 Oro", "precio": "4250", "precio_oferta": "", "imagen": "", "descripcion": "" },
-    { "producto": "540 Oro", "precio": "6850", "precio_oferta": "", "imagen": "", "descripcion": "" },
-    { "producto": "1100 Oro", "precio": "13450", "precio_oferta": "", "imagen": "", "descripcion": "" },
-    { "producto": "2260 Oro", "precio": "26300", "precio_oferta": "", "imagen": "", "descripcion": "" },
-    { "producto": "5800 Oro", "precio": "64300", "precio_oferta": "", "imagen": "", "descripcion": "" }
+    {
+      "producto": "105 Oro",
+      "precio": "1400",
+      "precio_oferta": "",
+      "imagen": "/images/b04869f6-84dc-43ea-a4af-d346d732e196.jpg",
+      "descripcion": ""
+    },
+    {
+      "producto": "320 Oro",
+      "precio": "4250",
+      "precio_oferta": "",
+      "imagen": "/images/b40c0012-58b2-4d7e-a38e-5fd4ad50df31.jpg",
+      "descripcion": ""
+    },
+    {
+      "producto": "540 Oro",
+      "precio": "6850",
+      "precio_oferta": "",
+      "imagen": "/images/ab67874d-24c6-4a54-9f1d-2e8c0bea3447.jpg",
+      "descripcion": ""
+    },
+    {
+      "producto": "1100 Oro",
+      "precio": "13450",
+      "precio_oferta": "",
+      "imagen": "/images/2e9c0bf1-c94d-4169-800f-0bc70886dce2.jpg",
+      "descripcion": ""
+    },
+    {
+      "producto": "2260 Oro",
+      "precio": "26300",
+      "precio_oferta": "",
+      "imagen": "/images/7f7f1dc8-a9a6-4e72-bfd4-fc9de273398a.jpg",
+      "descripcion": ""
+    },
+    {
+      "producto": "5800 Oro",
+      "precio": "64300",
+      "precio_oferta": "",
+      "imagen": "/images/6367f95e-8865-46f9-9564-3e2933fb16f9.jpg",
+      "descripcion": ""
+    }
   ]
 }

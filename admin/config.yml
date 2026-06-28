@@ -62,6 +62,7 @@ collections:
                   - "Arena Breakout"
                   - "Wuthering Waves"
                   - "Marvel Rivals"
+                  - "Racing Master"
               - { label: "Subcategoría (debe coincidir exacto)", name: "subcategoria", widget: "string" }
               - { label: "Imagen", name: "imagen", widget: "image", required: false }
 
@@ -104,6 +105,7 @@ collections:
                   - "Arena Breakout"
                   - "Wuthering Waves"
                   - "Marvel Rivals"
+                  - "Racing Master"
               - { label: "Imagen", name: "imagen", widget: "image", required: false, hint: "Foto representativa de la categoría" }
 
   # ===== PlayStation (4 archivos según subcategoría) =====
@@ -483,15 +485,35 @@ collections:
             widget: "list"
             summary: "{{fields.subcategoria}} — {{fields.producto}} (${{fields.precio}})"
             fields:
-              - label: "Plataforma"
+              - label: "Plataforma y tipo"
                 name: "subcategoria"
                 widget: "select"
                 options:
-                  - "TikTok"
-                  - "Instagram"
-                  - "Facebook"
+                  - "TikTok - Seguidores"
+                  - "TikTok - Vistas"
+                  - "TikTok - Me Gusta"
+                  - "Instagram - Seguidores"
+                  - "Instagram - Me Gusta"
+                  - "YouTube - Suscriptores"
+                  - "YouTube - Vistas de Video"
+                  - "YouTube - Vistas de Shorts"
+                  - "YouTube - Me Gusta Video"
+                  - "YouTube - Me Gusta Shorts"
               - { label: "Producto (ej: 1000 Seguidores)", name: "producto", widget: "string" }
               - { label: "Precio", name: "precio", widget: "string" }
               - { label: "Precio Oferta (vacío si no hay oferta)", name: "precio_oferta", widget: "string", required: false }
               - { label: "Imagen", name: "imagen", widget: "image", required: false }
               - { label: "Descripción (opcional)", name: "descripcion", widget: "text", required: false }
+
+  - name: "racing-master"
+    label: "Racing Master"
+    files:
+      - name: "racing-master"
+        label: "Racing Master"
+        file: "data/racing-master.json"
+        fields:
+          - label: "Productos"
+            name: "items"
+            widget: "list"
+            summary: "{{fields.producto}} — ${{fields.precio}}"
+            fields: *producto_fields

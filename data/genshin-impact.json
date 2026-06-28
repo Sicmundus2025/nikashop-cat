@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "producto": "Bendición Lunar",
+      "precio": "8600",
+      "precio_oferta": "",
+      "imagen": "",
+      "descripcion": ""
+    },
+    {
       "producto": "60 Cristales",
       "precio": "1800",
       "precio_oferta": "",
@@ -38,13 +45,6 @@
     {
       "producto": "8.080 Cristales",
       "precio": "159600",
-      "precio_oferta": "",
-      "imagen": "",
-      "descripcion": ""
-    },
-    {
-      "producto": "Bendición Lunar",
-      "precio": "7500",
       "precio_oferta": "",
       "imagen": "",
       "descripcion": ""

@@ -44,7 +44,7 @@
       "subcategoria": "Recarga Global",
       "producto": "86 (78+8) Diamantes",
       "precio": "2050",
-      "precio_oferta": "",
+      "precio_oferta": "2000",
       "imagen": "",
       "descripcion": ""
     },
@@ -52,7 +52,7 @@
       "subcategoria": "Recarga Global",
       "producto": "172 (156+16) Diamantes",
       "precio": "4100",
-      "precio_oferta": "",
+      "precio_oferta": "4000",
       "imagen": "",
       "descripcion": ""
     },
@@ -60,7 +60,7 @@
       "subcategoria": "Recarga Global",
       "producto": "344 (312+32) Diamantes",
       "precio": "8200",
-      "precio_oferta": "",
+      "precio_oferta": "8000",
       "imagen": "",
       "descripcion": ""
     },
@@ -68,7 +68,7 @@
       "subcategoria": "Recarga Global",
       "producto": "514 (468+46) Diamantes",
       "precio": "12300",
-      "precio_oferta": "",
+      "precio_oferta": "12000",
       "imagen": "",
       "descripcion": ""
     },
@@ -76,7 +76,7 @@
       "subcategoria": "Recarga Global",
       "producto": "600 (546+54) Diamantes",
       "precio": "14350",
-      "precio_oferta": "",
+      "precio_oferta": "14000",
       "imagen": "",
       "descripcion": ""
     },
@@ -84,7 +84,7 @@
       "subcategoria": "Recarga Global",
       "producto": "706 (625+81) Diamantes",
       "precio": "16200",
-      "precio_oferta": "",
+      "precio_oferta": "15900",
       "imagen": "",
       "descripcion": ""
     },
@@ -92,7 +92,7 @@
       "subcategoria": "Recarga Global",
       "producto": "963 (859+104) Diamantes",
       "precio": "22250",
-      "precio_oferta": "",
+      "precio_oferta": "21800",
       "imagen": "",
       "descripcion": ""
     },
@@ -100,7 +100,7 @@
       "subcategoria": "Recarga Global",
       "producto": "1.446 (1296+150) Diamantes",
       "precio": "33500",
-      "precio_oferta": "",
+      "precio_oferta": "31500",
       "imagen": "",
       "descripcion": ""
     },
@@ -108,7 +108,7 @@
       "subcategoria": "Recarga Global",
       "producto": "2.195 (1860+335) Diamantes",
       "precio": "49000",
-      "precio_oferta": "",
+      "precio_oferta": "46000",
       "imagen": "",
       "descripcion": ""
     },
@@ -116,7 +116,7 @@
       "subcategoria": "Recarga Global",
       "producto": "3.688 (3099+589) Diamantes",
       "precio": "82000",
-      "precio_oferta": "",
+      "precio_oferta": "77500",
       "imagen": "",
       "descripcion": ""
     },
@@ -124,7 +124,7 @@
       "subcategoria": "Recarga Global",
       "producto": "5.532 (4649+883) Diamantes",
       "precio": "112600",
-      "precio_oferta": "",
+      "precio_oferta": "116500",
       "imagen": "",
       "descripcion": ""
     },
@@ -132,7 +132,7 @@
       "subcategoria": "Recarga Global",
       "producto": "9.288 (7740+1548) Diamantes",
       "precio": "123000",
-      "precio_oferta": "",
+      "precio_oferta": "193000",
       "imagen": "",
       "descripcion": ""
     },
@@ -156,7 +156,7 @@
       "subcategoria": "Server Argentina",
       "producto": "192 Diamantes",
       "precio": "3600",
-      "precio_oferta": "3500",
+      "precio_oferta": "3400",
       "imagen": "",
       "descripcion": ""
     },
@@ -180,7 +180,7 @@
       "subcategoria": "Server Argentina",
       "producto": "971 Diamantes",
       "precio": "17500",
-      "precio_oferta": "16000",
+      "precio_oferta": "15600",
       "imagen": "",
       "descripcion": ""
     },
@@ -188,7 +188,7 @@
       "subcategoria": "Server Argentina",
       "producto": "1.494 Diamantes",
       "precio": "25000",
-      "precio_oferta": "23500",
+      "precio_oferta": "24000",
       "imagen": "",
       "descripcion": ""
     },
@@ -204,7 +204,7 @@
       "subcategoria": "Server Argentina",
       "producto": "6.210 Diamantes",
       "precio": "90000",
-      "precio_oferta": "88500",
+      "precio_oferta": "89500",
       "imagen": "",
       "descripcion": ""
     }

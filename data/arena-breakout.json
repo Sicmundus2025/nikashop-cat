@@ -1,16 +1,64 @@
 {
   "items": [
-    { "producto": "60+6 CP", "precio": "1350" },
-    { "producto": "310+25 CP", "precio": "3900" },
-    { "producto": "630+45 CP", "precio": "6450" },
-    { "producto": "1580+110 CP", "precio": "12850" },
-    { "producto": "3200+200 CP", "precio": "25450" },
-    { "producto": "6500+320 CP", "precio": "63000" },
-    { "producto": "Selección para Principiantes", "precio": "1250" },
-    { "producto": "Pase de Batalla Avanzado Mensual", "precio": "1550" },
-    { "producto": "Privilegios de Caja Antibalas", "precio": "3700" },
-    { "producto": "Pase de Batalla Premium Mensual", "precio": "6650" },
-    { "producto": "Privilegios de Caja Compuesta", "precio": "12100" },
-    { "producto": "Paquete Pase Premium Trimestral", "precio": "19050" }
+    {
+      "producto": "60+6 CP",
+      "precio": "1350",
+      "imagen": "/images/4f9927c5-b9cf-4ded-8b8f-be0bceb007c2.jpg"
+    },
+    {
+      "producto": "310+25 CP",
+      "precio": "3900",
+      "imagen": "/images/c569dd41-ca6e-4128-8f95-96d87971346c.jpg"
+    },
+    {
+      "producto": "630+45 CP",
+      "precio": "6450",
+      "imagen": "/images/54886709-1b34-41a0-b3a8-74559758b234.jpg"
+    },
+    {
+      "producto": "1580+110 CP",
+      "precio": "12850",
+      "imagen": "/images/bfde1c64-b2c1-40da-9e4d-c6f8d6c33b1d.jpg"
+    },
+    {
+      "producto": "3200+200 CP",
+      "precio": "25450",
+      "imagen": "/images/97b6bebe-be21-4575-b9ab-7024b6299f42.jpg"
+    },
+    {
+      "producto": "6500+320 CP",
+      "precio": "63000",
+      "imagen": "/images/30fdb627-a3d0-4c4d-8972-efa9ee85e970-1-.jpg"
+    },
+    {
+      "producto": "Selección para Principiantes",
+      "precio": "1250",
+      "imagen": "/images/e9c14a23-570c-4f2c-83b9-e1f8fda89e85.jpg"
+    },
+    {
+      "producto": "Pase de Batalla Avanzado Mensual",
+      "precio": "1550",
+      "imagen": "/images/10006dbe-57c6-45bd-b617-2ea1c8f08755.jpg"
+    },
+    {
+      "producto": "Privilegios de Caja Antibalas",
+      "precio": "3700",
+      "imagen": "/images/7af07dad-0af4-4c57-95ec-a7f32cd6d3c8.jpg"
+    },
+    {
+      "producto": "Pase de Batalla Premium Mensual",
+      "precio": "6650",
+      "imagen": "/images/de1fdad8-c533-44cb-8d02-a52eb259e9c0.jpg"
+    },
+    {
+      "producto": "Privilegios de Caja Compuesta",
+      "precio": "12100",
+      "imagen": "/images/8017e164-fc79-4250-9f02-3c651e87e607.jpg"
+    },
+    {
+      "producto": "Paquete Pase Premium Trimestral",
+      "precio": "19050",
+      "imagen": "/images/61f332ad-f883-4b78-93e5-ccb2106beb86.jpg"
+    }
   ]
 }

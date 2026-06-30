@@ -1,8 +1,0 @@
-[build]
-  functions = "netlify/functions"
-  publish = "."
-
-[[redirects]]
-  from = "/api/verificar-id"
-  to = "/.netlify/functions/verificar-id"
-  status = 200

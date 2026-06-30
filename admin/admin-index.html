@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NIKASHOP — Panel de administración</title>
+  <link rel="icon" href="data:," />
+  <style>
+    html, body {
+      margin: 0;
+      height: 100%;
+      background: #0E0E0E;
+      font-family: -apple-system, system-ui, sans-serif;
+    }
+    #nika-splash {
+      position: fixed;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 18px;
+      background: #0E0E0E;
+      z-index: 9999;
+      transition: opacity .35s ease;
+    }
+    #nika-splash.hide {
+      opacity: 0;
+      pointer-events: none;
+    }
+    #nika-splash .logo {
+      font-size: 26px;
+      font-weight: 800;
+      letter-spacing: .5px;
+      color: #fff;
+    }
+    #nika-splash .logo span { color: #FF6A00; }
+    #nika-splash .spinner {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      border: 3px solid rgba(255,255,255,0.12);
+      border-top-color: #FF6A00;
+      animation: nika-spin 0.8s linear infinite;
+    }
+    #nika-splash .msg {
+      font-size: 13px;
+      color: #A3A3A3;
+    }
+    @keyframes nika-spin { to { transform: rotate(360deg); } }
+  </style>
+</head>
+<body>
+  <!-- Pantalla de carga con la marca, mientras Decap CMS termina de inicializar -->
+  <div id="nika-splash">
+    <div class="logo">NIKA<span>SHOP</span></div>
+    <div class="spinner"></div>
+    <div class="msg">Cargando panel de administración…</div>
+  </div>
+
+  <!-- Carga Decap CMS (versión fijada, para evitar que una actualización automática rompa el panel) -->
+  <script src="https://unpkg.com/decap-cms@3.13.0/dist/decap-cms.js"></script>
+  <script>
+    // Decap monta su interfaz en cuanto está listo; ocultamos la pantalla de carga apenas eso pasa.
+    var splash = document.getElementById('nika-splash');
+    var attempts = 0;
+    var checkReady = setInterval(function () {
+      attempts++;
+      var mounted = document.querySelector('#nc-root, .Toastify, [class*="App"]');
+      if (mounted || attempts > 100) { // ~10s de margen máximo, por si la conexión es lenta
+        splash.classList.add('hide');
+        clearInterval(checkReady);
+        setTimeout(function () { splash.remove(); }, 400);
+      }
+    }, 100);
+  </script>
+</body>
+</html>

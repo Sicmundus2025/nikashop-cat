@@ -1,0 +1,521 @@
+backend:
+  name: github
+  repo: Sicmundus2025/nikashop-cat
+  branch: main
+  base_url: https://nikashop-ctb.pages.dev
+  auth_endpoint: auth
+
+# Las imágenes que subas desde el panel se guardan acá, dentro del repo
+media_folder: "images"
+public_folder: "/images"
+
+publish_mode: simple
+slug:
+  encoding: "ascii"
+  clean_accents: true
+
+collections:
+  # ===== Configuración general (logo del sitio) =====
+  - name: "configuracion"
+    label: "Configuración General"
+    files:
+      - name: "config-sitio"
+        label: "Logo del sitio"
+        file: "data/config-sitio.json"
+        fields:
+          - { label: "Logo de NIKASHOP", name: "logo", widget: "image", required: false, hint: "Si subís una imagen, reemplaza el ícono de la bolsa en el header y el footer" }
+
+  # ===== Imágenes de subcategorías =====
+  - name: "subcategorias-imagenes"
+    label: "Imágenes de Subcategorías"
+    files:
+      - name: "subcategorias"
+        label: "Imágenes de Subcategorías"
+        file: "data/subcategorias-imagenes.json"
+        fields:
+          - label: "Subcategorías"
+            name: "items"
+            widget: "list"
+            summary: "{{fields.categoria}} → {{fields.subcategoria}}"
+            fields:
+              - label: "Categoría"
+                name: "categoria"
+                widget: "select"
+                options:
+                  - "PlayStation"
+                  - "Honor of Kings"
+                  - "Genshin Impact"
+                  - "Free Fire"
+                  - "Mobile Legends"
+                  - "Brawl Stars"
+                  - "Streaming"
+                  - "Música y Video"
+                  - "Herramientas"
+                  - "Roblox"
+                  - "Gift Cards"
+                  - "Steam"
+                  - "Fortnite"
+                  - "PUBG"
+                  - "Delta Force"
+                  - "Blood Strike"
+                  - "Magic Chess: Go Go"
+                  - "Honkai: Star Rail"
+                  - "Redes Sociales"
+                  - "Arena Breakout"
+                  - "Wuthering Waves"
+                  - "Marvel Rivals"
+                  - "Racing Master"
+              - { label: "Subcategoría (debe coincidir exacto)", name: "subcategoria", widget: "string" }
+              - { label: "Imagen", name: "imagen", widget: "image", required: false }
+
+  # ===== Imágenes de las categorías principales =====
+  - name: "categorias-imagenes"
+    label: "Imágenes de Categorías"
+    files:
+      - name: "categorias"
+        label: "Imágenes de Categorías"
+        file: "data/categorias.json"
+        fields:
+          - label: "Categorías"
+            name: "items"
+            widget: "list"
+            summary: "{{fields.categoria}}"
+            fields:
+              - label: "Categoría"
+                name: "categoria"
+                widget: "select"
+                options:
+                  - "PlayStation"
+                  - "Honor of Kings"
+                  - "Genshin Impact"
+                  - "Free Fire"
+                  - "Mobile Legends"
+                  - "Brawl Stars"
+                  - "Streaming"
+                  - "Música y Video"
+                  - "Herramientas"
+                  - "Roblox"
+                  - "Gift Cards"
+                  - "Steam"
+                  - "Fortnite"
+                  - "PUBG"
+                  - "Delta Force"
+                  - "Blood Strike"
+                  - "Magic Chess: Go Go"
+                  - "Honkai: Star Rail"
+                  - "Redes Sociales"
+                  - "Arena Breakout"
+                  - "Wuthering Waves"
+                  - "Marvel Rivals"
+                  - "Racing Master"
+              - { label: "Imagen", name: "imagen", widget: "image", required: false, hint: "Foto representativa de la categoría" }
+
+  # ===== PlayStation (4 archivos según subcategoría) =====
+  - name: "ps4"
+    label: "PlayStation → Juegos PS4"
+    files:
+      - name: "ps4"
+        label: "PlayStation → Juegos PS4"
+        file: "data/playstation-ps4.json"
+        fields:
+          - label: "Productos"
+            name: "items"
+            widget: "list"
+            summary: "{{fields.producto}} — ${{fields.precio}}"
+            fields: &producto_fields
+              - { label: "Producto", name: "producto", widget: "string" }
+              - { label: "Precio", name: "precio", widget: "string" }
+              - { label: "Precio Oferta (vacío si no hay oferta)", name: "precio_oferta", widget: "string", required: false }
+              - { label: "Imagen", name: "imagen", widget: "image", required: false, hint: "Subí la foto del producto" }
+              - { label: "Descripción (opcional)", name: "descripcion", widget: "text", required: false }
+
+  - name: "ps5"
+    label: "PlayStation → Juegos PS5"
+    files:
+      - name: "ps5"
+        label: "PlayStation → Juegos PS5"
+        file: "data/playstation-ps5.json"
+        fields:
+          - label: "Productos"
+            name: "items"
+            widget: "list"
+            summary: "{{fields.producto}} — ${{fields.precio}}"
+            fields: *producto_fields
+
+  - name: "ps-ofertas"
+    label: "PlayStation → Ofertas Especiales"
+    files:
+      - name: "ps-ofertas"
+        label: "PlayStation → Ofertas Especiales"
+        file: "data/playstation-ofertas.json"
+        fields:
+          - label: "Productos"
+            name: "items"
+            widget: "list"
+            summary: "{{fields.producto}} — ${{fields.precio}}"
+            fields: *producto_fields
+
+  - name: "ps-plus"
+    label: "PlayStation → PS Plus"
+    files:
+      - name: "ps-plus"
+        label: "PlayStation → PS Plus"
+        file: "data/playstation-plus.json"
+        fields:
+          - label: "Productos"
+            name: "items"
+            widget: "list"
+            summary: "{{fields.producto}} — ${{fields.precio}}"
+            fields: *producto_fields
+
+  # ===== Categorías con subcategoría variable =====
+  - name: "honor-of-kings"
+    label: "Honor of Kings"
+    files:
+      - name: "honor-of-kings"
+        label: "Honor of Kings"
+        file: "data/honor-of-kings.json"
+        fields:
+          - label: "Productos"
+            name: "items"
+            widget: "list"
+            summary: "{{fields.subcategoria}} — {{fields.producto}} (${{fields.precio}})"
+            fields: &producto_fields_sub
+              - { label: "Subcategoría (ej: Tarjetas, Tokens)", name: "subcategoria", widget: "string", required: false }
+              - { label: "Producto", name: "producto", widget: "string" }
+              - { label: "Precio", name: "precio", widget: "string" }
+              - { label: "Precio Oferta (vacío si no hay oferta)", name: "precio_oferta", widget: "string", required: false }
+              - { label: "Imagen", name: "imagen", widget: "image", required: false }
+              - { label: "Descripción (opcional)", name: "descripcion", widget: "text", required: false }
+
+  - name: "mobile-legends"
+    label: "Mobile Legends"
+    files:
+      - name: "mobile-legends"
+        label: "Mobile Legends"
+        file: "data/mobile-legends.json"
+        fields:
+          - label: "Productos"
+            name: "items"
+            widget: "list"
+            summary: "{{fields.subcategoria}} — {{fields.producto}} (${{fields.precio}})"
+            fields: *producto_fields_sub
+
+  - name: "brawl-stars"
+    label: "Brawl Stars"
+    files:
+      - name: "brawl-stars"
+        label: "Brawl Stars"
+        file: "data/brawl-stars.json"
+        fields:
+          - label: "Productos"
+            name: "items"
+            widget: "list"
+            summary: "{{fields.subcategoria}} — {{fields.producto}} (${{fields.precio}})"
+            fields: *producto_fields_sub
+
+  - name: "streaming"
+    label: "Streaming"
+    files:
+      - name: "streaming"
+        label: "Streaming"
+        file: "data/streaming.json"
+        fields:
+          - label: "Productos"
+            name: "items"
+            widget: "list"
+            summary: "{{fields.subcategoria}} — {{fields.producto}} (${{fields.precio}})"
+            fields: *producto_fields_sub
+
+  - name: "herramientas"
+    label: "Herramientas"
+    files:
+      - name: "herramientas"
+        label: "Herramientas"
+        file: "data/herramientas.json"
+        fields:
+          - label: "Productos"
+            name: "items"
+            widget: "list"
+            summary: "{{fields.subcategoria}} — {{fields.producto}} (${{fields.precio}})"
+            fields: *producto_fields_sub
+
+  # ===== Categorías simples (sin subcategoría) =====
+  - name: "genshin-impact"
+    label: "Genshin Impact"
+    files:
+      - name: "genshin-impact"
+        label: "Genshin Impact"
+        file: "data/genshin-impact.json"
+        fields:
+          - label: "Productos"
+            name: "items"
+            widget: "list"
+            summary: "{{fields.producto}} — ${{fields.precio}}"
+            fields: *producto_fields
+
+  - name: "free-fire"
+    label: "Free Fire"
+    files:
+      - name: "free-fire"
+        label: "Free Fire"
+        file: "data/free-fire.json"
+        fields:
+          - label: "Productos"
+            name: "items"
+            widget: "list"
+            summary: "{{fields.producto}} — ${{fields.precio}}"
+            fields: *producto_fields
+
+  - name: "musica-y-video"
+    label: "Música y Video"
+    files:
+      - name: "musica-y-video"
+        label: "Música y Video"
+        file: "data/musica-y-video.json"
+        fields:
+          - label: "Productos"
+            name: "items"
+            widget: "list"
+            summary: "{{fields.producto}} — ${{fields.precio}}"
+            fields: *producto_fields
+
+  - name: "roblox"
+    label: "Roblox"
+    files:
+      - name: "roblox"
+        label: "Roblox"
+        file: "data/roblox.json"
+        fields:
+          - label: "Productos"
+            name: "items"
+            widget: "list"
+            summary: "{{fields.subcategoria}} — {{fields.producto}} (${{fields.precio}})"
+            fields:
+              - label: "Subcategoría"
+                name: "subcategoria"
+                widget: "select"
+                options:
+                  - "Robux"
+                  - "SAB"
+                  - "MM2"
+                  - "ADM"
+                  - "GAG"
+                  - "Grow a Garden 2"
+                  - "Rivals"
+                  - "Kick a Lucky Block"
+                  - "Slime RNG"
+                  - "Escape Tsunami For Brainrot Shops"
+                  - "Blox Fruits"
+                  - "TTD"
+                  - "Blade Ball"
+                  - "DonutSMP"
+                  - "Sailor Piece"
+                  - "Bite By Night"
+                  - "Forza Horizon 6"
+              - { label: "Producto", name: "producto", widget: "string" }
+              - { label: "Precio", name: "precio", widget: "string" }
+              - { label: "Precio Oferta (vacío si no hay oferta)", name: "precio_oferta", widget: "string", required: false }
+              - { label: "Imagen", name: "imagen", widget: "image", required: false }
+              - { label: "Descripción (opcional)", name: "descripcion", widget: "text", required: false }
+
+  - name: "gift-cards-steam"
+    label: "Gift Cards → Steam"
+    files:
+      - name: "gift-cards-steam"
+        label: "Gift Cards → Steam"
+        file: "data/gift-cards-steam.json"
+        fields:
+          - label: "Productos"
+            name: "items"
+            widget: "list"
+            summary: "{{fields.producto}} — ${{fields.precio}}"
+            fields: *producto_fields
+
+  - name: "steam-keys"
+    label: "Steam → Keys"
+    files:
+      - name: "steam-keys"
+        label: "Steam → Keys"
+        file: "data/steam-keys.json"
+        fields:
+          - label: "Productos"
+            name: "items"
+            widget: "list"
+            summary: "{{fields.producto}} — ${{fields.precio}}"
+            fields: *producto_fields
+
+  - name: "steam-cuentas"
+    label: "Steam → Juegos (Cuentas)"
+    files:
+      - name: "steam-cuentas"
+        label: "Steam → Juegos (Cuentas)"
+        file: "data/steam-cuentas.json"
+        fields:
+          - label: "Productos"
+            name: "items"
+            widget: "list"
+            summary: "{{fields.producto}} — ${{fields.precio}}"
+            fields: *producto_fields
+
+  - name: "fortnite"
+    label: "Fortnite"
+    files:
+      - name: "fortnite"
+        label: "Fortnite"
+        file: "data/fortnite.json"
+        fields:
+          - label: "Productos"
+            name: "items"
+            widget: "list"
+            summary: "{{fields.producto}} — ${{fields.precio}}"
+            fields: *producto_fields
+
+  - name: "pubg"
+    label: "PUBG"
+    files:
+      - name: "pubg"
+        label: "PUBG"
+        file: "data/pubg.json"
+        fields:
+          - label: "Productos"
+            name: "items"
+            widget: "list"
+            summary: "{{fields.producto}} — ${{fields.precio}}"
+            fields: *producto_fields
+
+  - name: "delta-force"
+    label: "Delta Force"
+    files:
+      - name: "delta-force"
+        label: "Delta Force"
+        file: "data/delta-force.json"
+        fields:
+          - label: "Productos"
+            name: "items"
+            widget: "list"
+            summary: "{{fields.producto}} — ${{fields.precio}}"
+            fields: *producto_fields
+
+  - name: "blood-strike"
+    label: "Blood Strike"
+    files:
+      - name: "blood-strike"
+        label: "Blood Strike"
+        file: "data/blood-strike.json"
+        fields:
+          - label: "Productos"
+            name: "items"
+            widget: "list"
+            summary: "{{fields.producto}} — ${{fields.precio}}"
+            fields: *producto_fields
+
+  - name: "magic-chess-go-go"
+    label: "Magic Chess: Go Go"
+    files:
+      - name: "magic-chess-go-go"
+        label: "Magic Chess: Go Go"
+        file: "data/magic-chess-go-go.json"
+        fields:
+          - label: "Productos"
+            name: "items"
+            widget: "list"
+            summary: "{{fields.producto}} — ${{fields.precio}}"
+            fields: *producto_fields
+
+  - name: "honkai-star-rail"
+    label: "Honkai: Star Rail"
+    files:
+      - name: "honkai-star-rail"
+        label: "Honkai: Star Rail"
+        file: "data/honkai-star-rail.json"
+        fields:
+          - label: "Productos"
+            name: "items"
+            widget: "list"
+            summary: "{{fields.producto}} — ${{fields.precio}}"
+            fields: *producto_fields
+
+  - name: "arena-breakout"
+    label: "Arena Breakout"
+    files:
+      - name: "arena-breakout"
+        label: "Arena Breakout"
+        file: "data/arena-breakout.json"
+        fields:
+          - label: "Productos"
+            name: "items"
+            widget: "list"
+            summary: "{{fields.producto}} — ${{fields.precio}}"
+            fields: *producto_fields
+
+  - name: "wuthering-waves"
+    label: "Wuthering Waves"
+    files:
+      - name: "wuthering-waves"
+        label: "Wuthering Waves"
+        file: "data/wuthering-waves.json"
+        fields:
+          - label: "Productos"
+            name: "items"
+            widget: "list"
+            summary: "{{fields.producto}} — ${{fields.precio}}"
+            fields: *producto_fields
+
+  - name: "marvel-rivals"
+    label: "Marvel Rivals"
+    files:
+      - name: "marvel-rivals"
+        label: "Marvel Rivals"
+        file: "data/marvel-rivals.json"
+        fields:
+          - label: "Productos"
+            name: "items"
+            widget: "list"
+            summary: "{{fields.producto}} — ${{fields.precio}}"
+            fields: *producto_fields
+
+  - name: "redes-sociales"
+    label: "Redes Sociales"
+    files:
+      - name: "redes-sociales"
+        label: "Redes Sociales"
+        file: "data/redes-sociales.json"
+        fields:
+          - label: "Productos"
+            name: "items"
+            widget: "list"
+            summary: "{{fields.subcategoria}} — {{fields.producto}} (${{fields.precio}})"
+            fields:
+              - label: "Plataforma y tipo"
+                name: "subcategoria"
+                widget: "select"
+                options:
+                  - "TikTok - Seguidores"
+                  - "TikTok - Vistas"
+                  - "TikTok - Me Gusta"
+                  - "Instagram - Seguidores"
+                  - "Instagram - Me Gusta"
+                  - "YouTube - Suscriptores"
+                  - "YouTube - Vistas de Video"
+                  - "YouTube - Vistas de Shorts"
+                  - "YouTube - Me Gusta Video"
+                  - "YouTube - Me Gusta Shorts"
+              - { label: "Producto (ej: 1000 Seguidores)", name: "producto", widget: "string" }
+              - { label: "Precio", name: "precio", widget: "string" }
+              - { label: "Precio Oferta (vacío si no hay oferta)", name: "precio_oferta", widget: "string", required: false }
+              - { label: "Imagen", name: "imagen", widget: "image", required: false }
+              - { label: "Descripción (opcional)", name: "descripcion", widget: "text", required: false }
+
+  - name: "racing-master"
+    label: "Racing Master"
+    files:
+      - name: "racing-master"
+        label: "Racing Master"
+        file: "data/racing-master.json"
+        fields:
+          - label: "Productos"
+            name: "items"
+            widget: "list"
+            summary: "{{fields.producto}} — ${{fields.precio}}"
+            fields: *producto_fields
